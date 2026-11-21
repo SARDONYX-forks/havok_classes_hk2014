@@ -1,0 +1,481 @@
+use super::class_requires::*;
+use super::*;
+/// # C++ Info
+/// - name: `hclSimClothDataParticleData`
+/// - version: `2`
+/// - signature: `0x230c8c28`
+/// - size: `  0`(x86)/` 16`(x86_64)
+/// -  vtable: `false`
+#[allow(non_upper_case_globals, non_snake_case)]
+#[cfg_attr(feature = "json_schema", derive(schemars::JsonSchema))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(educe::Educe)]
+#[educe(Debug, Clone, Default, PartialEq)]
+pub struct hclSimClothDataParticleData<'a> {
+    /// # Unique index for this class
+    /// - Represents a pointer on XML (`<hkobject name="#0001"></hkobject>`)
+    /// - [`Option::None`] => This class is `class in field`.(`<hkobject></hkobject>`)
+    ///
+    /// # Note
+    /// Not present in the binary & Not exist actual C++ field.
+    #[cfg_attr(
+        feature = "serde",
+        serde(skip_serializing_if = "Option::is_none", default)
+    )]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub __ptr: Option<Pointer<'a>>,
+    /// # C++ Info
+    /// - name: `mass`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`  0`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "mass"))]
+    #[cfg_attr(feature = "serde", serde(rename = "mass"))]
+    pub m_mass: f32,
+    /// # C++ Info
+    /// - name: `invMass`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`  4`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "invMass"))]
+    #[cfg_attr(feature = "serde", serde(rename = "invMass"))]
+    pub m_invMass: f32,
+    /// # C++ Info
+    /// - name: `radius`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`  8`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "radius"))]
+    #[cfg_attr(feature = "serde", serde(rename = "radius"))]
+    pub m_radius: f32,
+    /// # C++ Info
+    /// - name: `friction`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/` 12`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "friction"))]
+    #[cfg_attr(feature = "serde", serde(rename = "friction"))]
+    pub m_friction: f32,
+}
+const _: () = {
+    use havok_serde as _serde;
+    impl<'a> _serde::HavokClass for hclSimClothDataParticleData<'a> {
+        #[inline]
+        fn name(&self) -> &'static str {
+            "hclSimClothDataParticleData"
+        }
+        #[inline]
+        fn signature(&self) -> _serde::__private::Signature {
+            _serde::__private::Signature::new(0x230c8c28)
+        }
+        #[allow(clippy::let_and_return, clippy::vec_init_then_push)]
+        fn deps_indexes(&self) -> Vec<&Pointer<'_>> {
+            let mut v = Vec::new();
+            v
+        }
+    }
+    impl<'a> _serde::Serialize for hclSimClothDataParticleData<'a> {
+        fn serialize<S>(&self, __serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: _serde::ser::Serializer,
+        {
+            let class_meta = self
+                .__ptr
+                .as_ref()
+                .map(|name| (name, _serde::__private::Signature::new(0x230c8c28)));
+            let mut serializer = __serializer
+                .serialize_struct(
+                    "hclSimClothDataParticleData",
+                    class_meta,
+                    (0u64, 16u64),
+                )?;
+            serializer.serialize_field("mass", &self.m_mass)?;
+            serializer.serialize_field("invMass", &self.m_invMass)?;
+            serializer.serialize_field("radius", &self.m_radius)?;
+            serializer.serialize_field("friction", &self.m_friction)?;
+            serializer.end()
+        }
+    }
+};
+#[doc(hidden)]
+#[allow(non_upper_case_globals, unused_attributes, unused_qualifications)]
+const _: () = {
+    use havok_serde as _serde;
+    #[automatically_derived]
+    impl<'de> _serde::Deserialize<'de> for hclSimClothDataParticleData<'de> {
+        fn deserialize<__D>(deserializer: __D) -> core::result::Result<Self, __D::Error>
+        where
+            __D: _serde::Deserializer<'de>,
+        {
+            #[allow(non_camel_case_types)]
+            enum __Field {
+                m_mass,
+                m_invMass,
+                m_radius,
+                m_friction,
+                __ignore,
+            }
+            struct __FieldVisitor;
+            impl<'de> _serde::de::Visitor<'de> for __FieldVisitor {
+                type Value = __Field;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(__formatter, "field identifier")
+                }
+                /// Intended for use in XML.
+                #[allow(clippy::match_single_binding)]
+                #[allow(clippy::reversed_empty_ranges)]
+                #[allow(clippy::single_match)]
+                fn visit_key<__E>(
+                    self,
+                    __value: &str,
+                ) -> core::result::Result<Self::Value, __E>
+                where
+                    __E: _serde::de::Error,
+                {
+                    match __value {
+                        "mass" => Ok(__Field::m_mass),
+                        "invMass" => Ok(__Field::m_invMass),
+                        "radius" => Ok(__Field::m_radius),
+                        "friction" => Ok(__Field::m_friction),
+                        _ => Ok(__Field::__ignore),
+                    }
+                }
+            }
+            impl<'de> _serde::Deserialize<'de> for __Field {
+                #[inline]
+                fn deserialize<__D>(
+                    __deserializer: __D,
+                ) -> core::result::Result<Self, __D::Error>
+                where
+                    __D: _serde::Deserializer<'de>,
+                {
+                    _serde::Deserializer::deserialize_key(__deserializer, __FieldVisitor)
+                }
+            }
+            struct __hclSimClothDataParticleDataVisitor<'de> {
+                marker: _serde::__private::PhantomData<hclSimClothDataParticleData<'de>>,
+                lifetime: _serde::__private::PhantomData<&'de ()>,
+            }
+            #[allow(clippy::match_single_binding)]
+            #[allow(clippy::reversed_empty_ranges)]
+            #[allow(clippy::single_match)]
+            impl<'de> _serde::de::Visitor<'de>
+            for __hclSimClothDataParticleDataVisitor<'de> {
+                type Value = hclSimClothDataParticleData<'de>;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(
+                        __formatter,
+                        "struct hclSimClothDataParticleData",
+                    )
+                }
+                fn visit_struct_for_bytes<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let __ptr = __A::class_ptr(&mut __map);
+                    let mut m_mass: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_invMass: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_radius: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_friction: _serde::__private::Option<f32> = _serde::__private::None;
+                    for i in 0..4usize {
+                        match i {
+                            0usize => {
+                                if _serde::__private::Option::is_some(&m_mass) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field("mass"),
+                                    );
+                                }
+                                m_mass = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            1usize => {
+                                if _serde::__private::Option::is_some(&m_invMass) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "invMass",
+                                        ),
+                                    );
+                                }
+                                m_invMass = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            2usize => {
+                                if _serde::__private::Option::is_some(&m_radius) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field("radius"),
+                                    );
+                                }
+                                m_radius = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            3usize => {
+                                if _serde::__private::Option::is_some(&m_friction) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "friction",
+                                        ),
+                                    );
+                                }
+                                m_friction = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => {}
+                        }
+                    }
+                    let m_mass = match m_mass {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("mass"),
+                            );
+                        }
+                    };
+                    let m_invMass = match m_invMass {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("invMass"),
+                            );
+                        }
+                    };
+                    let m_radius = match m_radius {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("radius"),
+                            );
+                        }
+                    };
+                    let m_friction = match m_friction {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("friction"),
+                            );
+                        }
+                    };
+                    _serde::__private::Ok(hclSimClothDataParticleData {
+                        __ptr,
+                        m_mass,
+                        m_invMass,
+                        m_radius,
+                        m_friction,
+                    })
+                }
+                #[allow(clippy::manual_unwrap_or_default)]
+                fn visit_struct<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let mut m_mass: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_invMass: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_radius: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_friction: _serde::__private::Option<f32> = _serde::__private::None;
+                    while let _serde::__private::Some(__key) = {
+                        __A::next_key::<__Field>(&mut __map)?
+                    } {
+                        match __key {
+                            __Field::m_mass => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_mass) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field("mass"),
+                                    );
+                                }
+                                m_mass = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_invMass => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_invMass) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "invMass",
+                                        ),
+                                    );
+                                }
+                                m_invMass = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_radius => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_radius) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field("radius"),
+                                    );
+                                }
+                                m_radius = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_friction => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_friction) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "friction",
+                                        ),
+                                    );
+                                }
+                                m_friction = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => __A::skip_value(&mut __map)?,
+                        }
+                    }
+                    let m_mass = match m_mass {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("mass"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_invMass = match m_invMass {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("invMass"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_radius = match m_radius {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("radius"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_friction = match m_friction {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("friction"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let __ptr = __A::class_ptr(&mut __map);
+                    _serde::__private::Ok(hclSimClothDataParticleData {
+                        __ptr: __ptr.clone(),
+                        m_mass,
+                        m_invMass,
+                        m_radius,
+                        m_friction,
+                    })
+                }
+            }
+            const FIELDS: &[&str] = &["mass", "invMass", "radius", "friction"];
+            _serde::Deserializer::deserialize_struct(
+                deserializer,
+                "hclSimClothDataParticleData",
+                FIELDS,
+                __hclSimClothDataParticleDataVisitor {
+                    marker: _serde::__private::PhantomData::<
+                        hclSimClothDataParticleData,
+                    >,
+                    lifetime: _serde::__private::PhantomData,
+                },
+            )
+        }
+    }
+};

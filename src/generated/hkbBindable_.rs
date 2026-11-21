@@ -1,0 +1,423 @@
+use super::class_requires::*;
+use super::*;
+/// # C++ Info
+/// - name: `hkbBindable`
+/// - version: `0`
+/// - signature: `0x654ce763`
+/// - size: `  0`(x86)/` 48`(x86_64)
+/// -  vtable: `true`
+#[allow(non_upper_case_globals, non_snake_case)]
+#[cfg_attr(feature = "json_schema", derive(schemars::JsonSchema))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(educe::Educe)]
+#[educe(Debug, Clone, Default, PartialEq)]
+pub struct hkbBindable<'a> {
+    /// # Unique index for this class
+    /// - Represents a pointer on XML (`<hkobject name="#0001"></hkobject>`)
+    /// - [`Option::None`] => This class is `class in field`.(`<hkobject></hkobject>`)
+    ///
+    /// # Note
+    /// Not present in the binary & Not exist actual C++ field.
+    #[cfg_attr(
+        feature = "serde",
+        serde(skip_serializing_if = "Option::is_none", default)
+    )]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub __ptr: Option<Pointer<'a>>,
+    /// Alternative to C++ class inheritance.
+    #[cfg_attr(feature = "json_schema", schemars(flatten))]
+    #[cfg_attr(feature = "serde", serde(flatten))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub parent: hkReferencedObject<'a>,
+    /// # C++ Info
+    /// - name: `variableBindingSet`(ctype: `struct hkbVariableBindingSet*`)
+    /// - offset: `  0`(x86)/` 16`(x86_64)
+    /// - type_size: `  0`(x86)/`  8`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "variableBindingSet"))]
+    #[cfg_attr(feature = "serde", serde(rename = "variableBindingSet"))]
+    pub m_variableBindingSet: Pointer<'a>,
+    /// # C++ Info
+    /// - name: `cachedBindables`(ctype: `hkArray<void*>`)
+    /// - offset: `  0`(x86)/` 24`(x86_64)
+    /// - type_size: `  0`(x86)/` 16`(x86_64)
+    /// - flags: `SERIALIZE_IGNORED`
+    #[cfg_attr(feature = "serde", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "cachedBindables"))]
+    #[cfg_attr(feature = "serde", serde(rename = "cachedBindables"))]
+    pub m_cachedBindables: Vec<Pointer<'a>>,
+    /// # C++ Info
+    /// - name: `areBindablesCached`(ctype: `hkBool`)
+    /// - offset: `  0`(x86)/` 40`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    /// - flags: `SERIALIZE_IGNORED`
+    #[cfg_attr(feature = "serde", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "areBindablesCached"))]
+    #[cfg_attr(feature = "serde", serde(rename = "areBindablesCached"))]
+    pub m_areBindablesCached: bool,
+    /// # C++ Info
+    /// - name: `hasEnableChanged`(ctype: `hkBool`)
+    /// - offset: `  0`(x86)/` 41`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    /// - flags: `SERIALIZE_IGNORED`
+    #[cfg_attr(feature = "serde", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "hasEnableChanged"))]
+    #[cfg_attr(feature = "serde", serde(rename = "hasEnableChanged"))]
+    pub m_hasEnableChanged: bool,
+}
+const _: () = {
+    use havok_serde as _serde;
+    impl<'a> _serde::HavokClass for hkbBindable<'a> {
+        #[inline]
+        fn name(&self) -> &'static str {
+            "hkbBindable"
+        }
+        #[inline]
+        fn signature(&self) -> _serde::__private::Signature {
+            _serde::__private::Signature::new(0x654ce763)
+        }
+        #[allow(clippy::let_and_return, clippy::vec_init_then_push)]
+        fn deps_indexes(&self) -> Vec<&Pointer<'_>> {
+            let mut v = Vec::new();
+            v.push(&self.m_variableBindingSet);
+            v.extend(self.m_cachedBindables.iter());
+            v
+        }
+    }
+    impl<'a> _serde::Serialize for hkbBindable<'a> {
+        fn serialize<S>(&self, __serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: _serde::ser::Serializer,
+        {
+            let class_meta = self
+                .__ptr
+                .as_ref()
+                .map(|name| (name, _serde::__private::Signature::new(0x654ce763)));
+            let mut serializer = __serializer
+                .serialize_struct("hkbBindable", class_meta, (0u64, 48u64))?;
+            serializer.pad_field([0u8; 0usize].as_slice(), [0u8; 8usize].as_slice())?;
+            serializer
+                .skip_field("memSizeAndRefCount", &self.parent.m_memSizeAndRefCount)?;
+            serializer.pad_field([0u8; 0usize].as_slice(), [0u8; 4usize].as_slice())?;
+            serializer
+                .serialize_field("variableBindingSet", &self.m_variableBindingSet)?;
+            serializer
+                .skip_array_field(
+                    "cachedBindables",
+                    &self.m_cachedBindables,
+                    TypeSize::NonPtr,
+                )?;
+            serializer.skip_field("areBindablesCached", &self.m_areBindablesCached)?;
+            serializer.skip_field("hasEnableChanged", &self.m_hasEnableChanged)?;
+            serializer.pad_field([0u8; 0usize].as_slice(), [0u8; 6usize].as_slice())?;
+            serializer.end()
+        }
+    }
+};
+#[doc(hidden)]
+#[allow(non_upper_case_globals, unused_attributes, unused_qualifications)]
+const _: () = {
+    use havok_serde as _serde;
+    #[automatically_derived]
+    impl<'de> _serde::Deserialize<'de> for hkbBindable<'de> {
+        fn deserialize<__D>(deserializer: __D) -> core::result::Result<Self, __D::Error>
+        where
+            __D: _serde::Deserializer<'de>,
+        {
+            #[allow(non_camel_case_types)]
+            enum __Field {
+                m_variableBindingSet,
+                __ignore,
+            }
+            struct __FieldVisitor;
+            impl<'de> _serde::de::Visitor<'de> for __FieldVisitor {
+                type Value = __Field;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(__formatter, "field identifier")
+                }
+                /// Intended for use in XML.
+                #[allow(clippy::match_single_binding)]
+                #[allow(clippy::reversed_empty_ranges)]
+                #[allow(clippy::single_match)]
+                fn visit_key<__E>(
+                    self,
+                    __value: &str,
+                ) -> core::result::Result<Self::Value, __E>
+                where
+                    __E: _serde::de::Error,
+                {
+                    match __value {
+                        "variableBindingSet" => Ok(__Field::m_variableBindingSet),
+                        _ => Ok(__Field::__ignore),
+                    }
+                }
+            }
+            impl<'de> _serde::Deserialize<'de> for __Field {
+                #[inline]
+                fn deserialize<__D>(
+                    __deserializer: __D,
+                ) -> core::result::Result<Self, __D::Error>
+                where
+                    __D: _serde::Deserializer<'de>,
+                {
+                    _serde::Deserializer::deserialize_key(__deserializer, __FieldVisitor)
+                }
+            }
+            struct __hkbBindableVisitor<'de> {
+                marker: _serde::__private::PhantomData<hkbBindable<'de>>,
+                lifetime: _serde::__private::PhantomData<&'de ()>,
+            }
+            #[allow(clippy::match_single_binding)]
+            #[allow(clippy::reversed_empty_ranges)]
+            #[allow(clippy::single_match)]
+            impl<'de> _serde::de::Visitor<'de> for __hkbBindableVisitor<'de> {
+                type Value = hkbBindable<'de>;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(__formatter, "struct hkbBindable")
+                }
+                fn visit_struct_for_bytes<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let __ptr = __A::class_ptr(&mut __map);
+                    let parent = __A::parent_value(&mut __map)?;
+                    let mut m_variableBindingSet: _serde::__private::Option<
+                        Pointer<'de>,
+                    > = _serde::__private::None;
+                    let mut m_cachedBindables: _serde::__private::Option<
+                        Vec<Pointer<'de>>,
+                    > = _serde::__private::None;
+                    let mut m_areBindablesCached: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_hasEnableChanged: _serde::__private::Option<bool> = _serde::__private::None;
+                    for i in 0..4usize {
+                        match i {
+                            0usize => {
+                                if _serde::__private::Option::is_some(
+                                    &m_variableBindingSet,
+                                ) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "variableBindingSet",
+                                        ),
+                                    );
+                                }
+                                m_variableBindingSet = _serde::__private::Some(
+                                    match __A::next_value::<Pointer<'de>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            1usize => {
+                                if _serde::__private::Option::is_some(&m_cachedBindables) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "cachedBindables",
+                                        ),
+                                    );
+                                }
+                                m_cachedBindables = _serde::__private::Some(
+                                    match __A::next_value::<Vec<Pointer<'de>>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            2usize => {
+                                if _serde::__private::Option::is_some(
+                                    &m_areBindablesCached,
+                                ) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "areBindablesCached",
+                                        ),
+                                    );
+                                }
+                                m_areBindablesCached = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            3usize => {
+                                if _serde::__private::Option::is_some(&m_hasEnableChanged) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "hasEnableChanged",
+                                        ),
+                                    );
+                                }
+                                m_hasEnableChanged = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => {}
+                        }
+                    }
+                    __A::pad(&mut __map, 0usize, 6usize)?;
+                    let m_variableBindingSet = match m_variableBindingSet {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "variableBindingSet",
+                                ),
+                            );
+                        }
+                    };
+                    let m_cachedBindables = match m_cachedBindables {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "cachedBindables",
+                                ),
+                            );
+                        }
+                    };
+                    let m_areBindablesCached = match m_areBindablesCached {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "areBindablesCached",
+                                ),
+                            );
+                        }
+                    };
+                    let m_hasEnableChanged = match m_hasEnableChanged {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "hasEnableChanged",
+                                ),
+                            );
+                        }
+                    };
+                    _serde::__private::Ok(hkbBindable {
+                        __ptr,
+                        parent,
+                        m_variableBindingSet,
+                        m_cachedBindables,
+                        m_areBindablesCached,
+                        m_hasEnableChanged,
+                    })
+                }
+                #[allow(clippy::manual_unwrap_or_default)]
+                fn visit_struct<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let mut m_variableBindingSet: _serde::__private::Option<
+                        Pointer<'de>,
+                    > = _serde::__private::None;
+                    while let _serde::__private::Some(__key) = {
+                        __A::next_key::<__Field>(&mut __map)?
+                    } {
+                        match __key {
+                            __Field::m_variableBindingSet => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(
+                                    &m_variableBindingSet,
+                                ) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "variableBindingSet",
+                                        ),
+                                    );
+                                }
+                                m_variableBindingSet = _serde::__private::Some(
+                                    match __A::next_value::<Pointer<'de>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => __A::skip_value(&mut __map)?,
+                        }
+                    }
+                    let m_variableBindingSet = match m_variableBindingSet {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "variableBindingSet",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let __ptr = None;
+                    let parent = hkBaseObject {
+                        __ptr: __ptr.clone(),
+                    };
+                    let parent = hkReferencedObject {
+                        __ptr: __ptr.clone(),
+                        parent,
+                        ..Default::default()
+                    };
+                    let __ptr = __A::class_ptr(&mut __map);
+                    _serde::__private::Ok(hkbBindable {
+                        __ptr: __ptr.clone(),
+                        parent,
+                        m_variableBindingSet,
+                        ..Default::default()
+                    })
+                }
+            }
+            const FIELDS: &[&str] = &[
+                "variableBindingSet",
+                "cachedBindables",
+                "areBindablesCached",
+                "hasEnableChanged",
+            ];
+            _serde::Deserializer::deserialize_struct(
+                deserializer,
+                "hkbBindable",
+                FIELDS,
+                __hkbBindableVisitor {
+                    marker: _serde::__private::PhantomData::<hkbBindable>,
+                    lifetime: _serde::__private::PhantomData,
+                },
+            )
+        }
+    }
+};

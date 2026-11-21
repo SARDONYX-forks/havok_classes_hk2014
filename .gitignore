@@ -1,0 +1,4 @@
+/target
+
+# unnecessary lib only
+Cargo.lock

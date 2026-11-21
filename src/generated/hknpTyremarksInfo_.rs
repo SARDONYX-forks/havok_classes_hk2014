@@ -1,0 +1,462 @@
+use super::class_requires::*;
+use super::*;
+/// # C++ Info
+/// - name: `hknpTyremarksInfo`
+/// - version: `0`
+/// - signature: `0xf484d193`
+/// - size: `  0`(x86)/` 40`(x86_64)
+/// -  vtable: `true`
+#[allow(non_upper_case_globals, non_snake_case)]
+#[cfg_attr(feature = "json_schema", derive(schemars::JsonSchema))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(educe::Educe)]
+#[educe(Debug, Clone, Default, PartialEq)]
+pub struct hknpTyremarksInfo<'a> {
+    /// # Unique index for this class
+    /// - Represents a pointer on XML (`<hkobject name="#0001"></hkobject>`)
+    /// - [`Option::None`] => This class is `class in field`.(`<hkobject></hkobject>`)
+    ///
+    /// # Note
+    /// Not present in the binary & Not exist actual C++ field.
+    #[cfg_attr(
+        feature = "serde",
+        serde(skip_serializing_if = "Option::is_none", default)
+    )]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub __ptr: Option<Pointer<'a>>,
+    /// Alternative to C++ class inheritance.
+    #[cfg_attr(feature = "json_schema", schemars(flatten))]
+    #[cfg_attr(feature = "serde", serde(flatten))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub parent: hkReferencedObject<'a>,
+    /// # C++ Info
+    /// - name: `minTyremarkEnergy`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/` 16`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "minTyremarkEnergy"))]
+    #[cfg_attr(feature = "serde", serde(rename = "minTyremarkEnergy"))]
+    pub m_minTyremarkEnergy: f32,
+    /// # C++ Info
+    /// - name: `maxTyremarkEnergy`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/` 20`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "maxTyremarkEnergy"))]
+    #[cfg_attr(feature = "serde", serde(rename = "maxTyremarkEnergy"))]
+    pub m_maxTyremarkEnergy: f32,
+    /// # C++ Info
+    /// - name: `tyremarksWheel`(ctype: `hkArray<hknpTyremarksWheel*>`)
+    /// - offset: `  0`(x86)/` 24`(x86_64)
+    /// - type_size: `  0`(x86)/` 16`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "tyremarksWheel"))]
+    #[cfg_attr(feature = "serde", serde(rename = "tyremarksWheel"))]
+    pub m_tyremarksWheel: Vec<Pointer<'a>>,
+}
+const _: () = {
+    use havok_serde as _serde;
+    impl<'a> _serde::HavokClass for hknpTyremarksInfo<'a> {
+        #[inline]
+        fn name(&self) -> &'static str {
+            "hknpTyremarksInfo"
+        }
+        #[inline]
+        fn signature(&self) -> _serde::__private::Signature {
+            _serde::__private::Signature::new(0xf484d193)
+        }
+        #[allow(clippy::let_and_return, clippy::vec_init_then_push)]
+        fn deps_indexes(&self) -> Vec<&Pointer<'_>> {
+            let mut v = Vec::new();
+            v.extend(self.m_tyremarksWheel.iter());
+            v
+        }
+    }
+    impl<'a> _serde::Serialize for hknpTyremarksInfo<'a> {
+        fn serialize<S>(&self, __serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: _serde::ser::Serializer,
+        {
+            let class_meta = self
+                .__ptr
+                .as_ref()
+                .map(|name| (name, _serde::__private::Signature::new(0xf484d193)));
+            let mut serializer = __serializer
+                .serialize_struct("hknpTyremarksInfo", class_meta, (0u64, 40u64))?;
+            serializer.pad_field([0u8; 0usize].as_slice(), [0u8; 8usize].as_slice())?;
+            serializer
+                .skip_field("memSizeAndRefCount", &self.parent.m_memSizeAndRefCount)?;
+            serializer.pad_field([0u8; 0usize].as_slice(), [0u8; 4usize].as_slice())?;
+            serializer.serialize_field("minTyremarkEnergy", &self.m_minTyremarkEnergy)?;
+            serializer.serialize_field("maxTyremarkEnergy", &self.m_maxTyremarkEnergy)?;
+            serializer
+                .serialize_array_field(
+                    "tyremarksWheel",
+                    &self.m_tyremarksWheel,
+                    TypeSize::NonPtr,
+                )?;
+            serializer.end()
+        }
+    }
+};
+#[doc(hidden)]
+#[allow(non_upper_case_globals, unused_attributes, unused_qualifications)]
+const _: () = {
+    use havok_serde as _serde;
+    #[automatically_derived]
+    impl<'de> _serde::Deserialize<'de> for hknpTyremarksInfo<'de> {
+        fn deserialize<__D>(deserializer: __D) -> core::result::Result<Self, __D::Error>
+        where
+            __D: _serde::Deserializer<'de>,
+        {
+            #[allow(non_camel_case_types)]
+            enum __Field {
+                m_minTyremarkEnergy,
+                m_maxTyremarkEnergy,
+                m_tyremarksWheel,
+                __ignore,
+            }
+            struct __FieldVisitor;
+            impl<'de> _serde::de::Visitor<'de> for __FieldVisitor {
+                type Value = __Field;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(__formatter, "field identifier")
+                }
+                /// Intended for use in XML.
+                #[allow(clippy::match_single_binding)]
+                #[allow(clippy::reversed_empty_ranges)]
+                #[allow(clippy::single_match)]
+                fn visit_key<__E>(
+                    self,
+                    __value: &str,
+                ) -> core::result::Result<Self::Value, __E>
+                where
+                    __E: _serde::de::Error,
+                {
+                    match __value {
+                        "minTyremarkEnergy" => Ok(__Field::m_minTyremarkEnergy),
+                        "maxTyremarkEnergy" => Ok(__Field::m_maxTyremarkEnergy),
+                        "tyremarksWheel" => Ok(__Field::m_tyremarksWheel),
+                        _ => Ok(__Field::__ignore),
+                    }
+                }
+            }
+            impl<'de> _serde::Deserialize<'de> for __Field {
+                #[inline]
+                fn deserialize<__D>(
+                    __deserializer: __D,
+                ) -> core::result::Result<Self, __D::Error>
+                where
+                    __D: _serde::Deserializer<'de>,
+                {
+                    _serde::Deserializer::deserialize_key(__deserializer, __FieldVisitor)
+                }
+            }
+            struct __hknpTyremarksInfoVisitor<'de> {
+                marker: _serde::__private::PhantomData<hknpTyremarksInfo<'de>>,
+                lifetime: _serde::__private::PhantomData<&'de ()>,
+            }
+            #[allow(clippy::match_single_binding)]
+            #[allow(clippy::reversed_empty_ranges)]
+            #[allow(clippy::single_match)]
+            impl<'de> _serde::de::Visitor<'de> for __hknpTyremarksInfoVisitor<'de> {
+                type Value = hknpTyremarksInfo<'de>;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(
+                        __formatter,
+                        "struct hknpTyremarksInfo",
+                    )
+                }
+                fn visit_struct_for_bytes<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let __ptr = __A::class_ptr(&mut __map);
+                    let parent = __A::parent_value(&mut __map)?;
+                    let mut m_minTyremarkEnergy: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_maxTyremarkEnergy: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_tyremarksWheel: _serde::__private::Option<
+                        Vec<Pointer<'de>>,
+                    > = _serde::__private::None;
+                    for i in 0..3usize {
+                        match i {
+                            0usize => {
+                                if _serde::__private::Option::is_some(
+                                    &m_minTyremarkEnergy,
+                                ) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "minTyremarkEnergy",
+                                        ),
+                                    );
+                                }
+                                m_minTyremarkEnergy = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            1usize => {
+                                if _serde::__private::Option::is_some(
+                                    &m_maxTyremarkEnergy,
+                                ) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "maxTyremarkEnergy",
+                                        ),
+                                    );
+                                }
+                                m_maxTyremarkEnergy = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            2usize => {
+                                if _serde::__private::Option::is_some(&m_tyremarksWheel) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "tyremarksWheel",
+                                        ),
+                                    );
+                                }
+                                m_tyremarksWheel = _serde::__private::Some(
+                                    match __A::next_value::<Vec<Pointer<'de>>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => {}
+                        }
+                    }
+                    let m_minTyremarkEnergy = match m_minTyremarkEnergy {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "minTyremarkEnergy",
+                                ),
+                            );
+                        }
+                    };
+                    let m_maxTyremarkEnergy = match m_maxTyremarkEnergy {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "maxTyremarkEnergy",
+                                ),
+                            );
+                        }
+                    };
+                    let m_tyremarksWheel = match m_tyremarksWheel {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "tyremarksWheel",
+                                ),
+                            );
+                        }
+                    };
+                    _serde::__private::Ok(hknpTyremarksInfo {
+                        __ptr,
+                        parent,
+                        m_minTyremarkEnergy,
+                        m_maxTyremarkEnergy,
+                        m_tyremarksWheel,
+                    })
+                }
+                #[allow(clippy::manual_unwrap_or_default)]
+                fn visit_struct<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let mut m_minTyremarkEnergy: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_maxTyremarkEnergy: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_tyremarksWheel: _serde::__private::Option<
+                        Vec<Pointer<'de>>,
+                    > = _serde::__private::None;
+                    while let _serde::__private::Some(__key) = {
+                        __A::next_key::<__Field>(&mut __map)?
+                    } {
+                        match __key {
+                            __Field::m_minTyremarkEnergy => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(
+                                    &m_minTyremarkEnergy,
+                                ) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "minTyremarkEnergy",
+                                        ),
+                                    );
+                                }
+                                m_minTyremarkEnergy = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_maxTyremarkEnergy => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(
+                                    &m_maxTyremarkEnergy,
+                                ) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "maxTyremarkEnergy",
+                                        ),
+                                    );
+                                }
+                                m_maxTyremarkEnergy = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_tyremarksWheel => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_tyremarksWheel) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "tyremarksWheel",
+                                        ),
+                                    );
+                                }
+                                m_tyremarksWheel = _serde::__private::Some(
+                                    match __A::next_value::<Vec<Pointer<'de>>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => __A::skip_value(&mut __map)?,
+                        }
+                    }
+                    let m_minTyremarkEnergy = match m_minTyremarkEnergy {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "minTyremarkEnergy",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_maxTyremarkEnergy = match m_maxTyremarkEnergy {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "maxTyremarkEnergy",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_tyremarksWheel = match m_tyremarksWheel {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "tyremarksWheel",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let __ptr = None;
+                    let parent = hkBaseObject {
+                        __ptr: __ptr.clone(),
+                    };
+                    let parent = hkReferencedObject {
+                        __ptr: __ptr.clone(),
+                        parent,
+                        ..Default::default()
+                    };
+                    let __ptr = __A::class_ptr(&mut __map);
+                    _serde::__private::Ok(hknpTyremarksInfo {
+                        __ptr: __ptr.clone(),
+                        parent,
+                        m_minTyremarkEnergy,
+                        m_maxTyremarkEnergy,
+                        m_tyremarksWheel,
+                    })
+                }
+            }
+            const FIELDS: &[&str] = &[
+                "minTyremarkEnergy",
+                "maxTyremarkEnergy",
+                "tyremarksWheel",
+            ];
+            _serde::Deserializer::deserialize_struct(
+                deserializer,
+                "hknpTyremarksInfo",
+                FIELDS,
+                __hknpTyremarksInfoVisitor {
+                    marker: _serde::__private::PhantomData::<hknpTyremarksInfo>,
+                    lifetime: _serde::__private::PhantomData,
+                },
+            )
+        }
+    }
+};

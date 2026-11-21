@@ -1,0 +1,1021 @@
+use super::class_requires::*;
+use super::*;
+/// # C++ Info
+/// - name: `hkbGeneratorSyncInfo`
+/// - version: `1`
+/// - signature: `0x4e4c8a98`
+/// - size: `  0`(x86)/`168`(x86_64)
+/// -  vtable: `false`
+#[allow(non_upper_case_globals, non_snake_case)]
+#[cfg_attr(feature = "json_schema", derive(schemars::JsonSchema))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+#[derive(educe::Educe)]
+#[educe(Debug, Clone, Default, PartialEq)]
+pub struct hkbGeneratorSyncInfo<'a> {
+    /// # Unique index for this class
+    /// - Represents a pointer on XML (`<hkobject name="#0001"></hkobject>`)
+    /// - [`Option::None`] => This class is `class in field`.(`<hkobject></hkobject>`)
+    ///
+    /// # Note
+    /// Not present in the binary & Not exist actual C++ field.
+    #[cfg_attr(
+        feature = "serde",
+        serde(skip_serializing_if = "Option::is_none", default)
+    )]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    pub __ptr: Option<Pointer<'a>>,
+    /// # C++ Info
+    /// - name: `syncPoints`(ctype: `struct hkbGeneratorSyncInfoSyncPoint[16]`)
+    /// - offset: `  0`(x86)/`  0`(x86_64)
+    /// - type_size: `  0`(x86)/`128`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "syncPoints"))]
+    #[cfg_attr(feature = "serde", serde(rename = "syncPoints"))]
+    pub m_syncPoints: [hkbGeneratorSyncInfoSyncPoint<'a>; 16usize],
+    /// # C++ Info
+    /// - name: `duration`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`128`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "duration"))]
+    #[cfg_attr(feature = "serde", serde(rename = "duration"))]
+    pub m_duration: f32,
+    /// # C++ Info
+    /// - name: `localTime`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`132`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "localTime"))]
+    #[cfg_attr(feature = "serde", serde(rename = "localTime"))]
+    pub m_localTime: f32,
+    /// # C++ Info
+    /// - name: `playbackSpeed`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`136`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "playbackSpeed"))]
+    #[cfg_attr(feature = "serde", serde(rename = "playbackSpeed"))]
+    pub m_playbackSpeed: f32,
+    /// # C++ Info
+    /// - name: `numSyncPoints`(ctype: `hkInt8`)
+    /// - offset: `  0`(x86)/`140`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "numSyncPoints"))]
+    #[cfg_attr(feature = "serde", serde(rename = "numSyncPoints"))]
+    pub m_numSyncPoints: I8<'a>,
+    /// # C++ Info
+    /// - name: `isCyclic`(ctype: `hkBool`)
+    /// - offset: `  0`(x86)/`141`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "isCyclic"))]
+    #[cfg_attr(feature = "serde", serde(rename = "isCyclic"))]
+    pub m_isCyclic: bool,
+    /// # C++ Info
+    /// - name: `isMirrored`(ctype: `hkBool`)
+    /// - offset: `  0`(x86)/`142`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "isMirrored"))]
+    #[cfg_attr(feature = "serde", serde(rename = "isMirrored"))]
+    pub m_isMirrored: bool,
+    /// # C++ Info
+    /// - name: `isAdditive`(ctype: `hkBool`)
+    /// - offset: `  0`(x86)/`143`(x86_64)
+    /// - type_size: `  0`(x86)/`  1`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "isAdditive"))]
+    #[cfg_attr(feature = "serde", serde(rename = "isAdditive"))]
+    pub m_isAdditive: bool,
+    /// # C++ Info
+    /// - name: `activeInterval`(ctype: `struct hkbGeneratorSyncInfoActiveInterval`)
+    /// - offset: `  0`(x86)/`144`(x86_64)
+    /// - type_size: `  0`(x86)/` 20`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "activeInterval"))]
+    #[cfg_attr(feature = "serde", serde(rename = "activeInterval"))]
+    pub m_activeInterval: hkbGeneratorSyncInfoActiveInterval<'a>,
+    /// # C++ Info
+    /// - name: `nativePlaybackSpeed`(ctype: `hkReal`)
+    /// - offset: `  0`(x86)/`164`(x86_64)
+    /// - type_size: `  0`(x86)/`  4`(x86_64)
+    #[cfg_attr(feature = "serde_default", serde(default))]
+    #[cfg_attr(feature = "json_schema", schemars(rename = "nativePlaybackSpeed"))]
+    #[cfg_attr(feature = "serde", serde(rename = "nativePlaybackSpeed"))]
+    pub m_nativePlaybackSpeed: f32,
+}
+const _: () = {
+    use havok_serde as _serde;
+    impl<'a> _serde::HavokClass for hkbGeneratorSyncInfo<'a> {
+        #[inline]
+        fn name(&self) -> &'static str {
+            "hkbGeneratorSyncInfo"
+        }
+        #[inline]
+        fn signature(&self) -> _serde::__private::Signature {
+            _serde::__private::Signature::new(0x4e4c8a98)
+        }
+        #[allow(clippy::let_and_return, clippy::vec_init_then_push)]
+        fn deps_indexes(&self) -> Vec<&Pointer<'_>> {
+            let mut v = Vec::new();
+            v.extend(
+                self
+                    .m_syncPoints
+                    .iter()
+                    .flat_map(|class| class.deps_indexes())
+                    .collect::<Vec<&Pointer<'_>>>(),
+            );
+            v.extend(self.m_activeInterval.deps_indexes());
+            v
+        }
+    }
+    impl<'a> _serde::Serialize for hkbGeneratorSyncInfo<'a> {
+        fn serialize<S>(&self, __serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: _serde::ser::Serializer,
+        {
+            let class_meta = self
+                .__ptr
+                .as_ref()
+                .map(|name| (name, _serde::__private::Signature::new(0x4e4c8a98)));
+            let mut serializer = __serializer
+                .serialize_struct("hkbGeneratorSyncInfo", class_meta, (0u64, 168u64))?;
+            serializer
+                .serialize_fixed_array_field(
+                    "syncPoints",
+                    self.m_syncPoints.as_slice(),
+                    TypeSize::Struct {
+                        size_x86: 0u64,
+                        size_x86_64: 8u64,
+                    },
+                )?;
+            serializer.serialize_field("duration", &self.m_duration)?;
+            serializer.serialize_field("localTime", &self.m_localTime)?;
+            serializer.serialize_field("playbackSpeed", &self.m_playbackSpeed)?;
+            serializer.serialize_field("numSyncPoints", &self.m_numSyncPoints)?;
+            serializer.serialize_field("isCyclic", &self.m_isCyclic)?;
+            serializer.serialize_field("isMirrored", &self.m_isMirrored)?;
+            serializer.serialize_field("isAdditive", &self.m_isAdditive)?;
+            serializer.serialize_field("activeInterval", &self.m_activeInterval)?;
+            serializer
+                .serialize_field("nativePlaybackSpeed", &self.m_nativePlaybackSpeed)?;
+            serializer.end()
+        }
+    }
+};
+#[doc(hidden)]
+#[allow(non_upper_case_globals, unused_attributes, unused_qualifications)]
+const _: () = {
+    use havok_serde as _serde;
+    #[automatically_derived]
+    impl<'de> _serde::Deserialize<'de> for hkbGeneratorSyncInfo<'de> {
+        fn deserialize<__D>(deserializer: __D) -> core::result::Result<Self, __D::Error>
+        where
+            __D: _serde::Deserializer<'de>,
+        {
+            #[allow(non_camel_case_types)]
+            enum __Field {
+                m_syncPoints,
+                m_duration,
+                m_localTime,
+                m_playbackSpeed,
+                m_numSyncPoints,
+                m_isCyclic,
+                m_isMirrored,
+                m_isAdditive,
+                m_activeInterval,
+                m_nativePlaybackSpeed,
+                __ignore,
+            }
+            struct __FieldVisitor;
+            impl<'de> _serde::de::Visitor<'de> for __FieldVisitor {
+                type Value = __Field;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(__formatter, "field identifier")
+                }
+                /// Intended for use in XML.
+                #[allow(clippy::match_single_binding)]
+                #[allow(clippy::reversed_empty_ranges)]
+                #[allow(clippy::single_match)]
+                fn visit_key<__E>(
+                    self,
+                    __value: &str,
+                ) -> core::result::Result<Self::Value, __E>
+                where
+                    __E: _serde::de::Error,
+                {
+                    match __value {
+                        "syncPoints" => Ok(__Field::m_syncPoints),
+                        "duration" => Ok(__Field::m_duration),
+                        "localTime" => Ok(__Field::m_localTime),
+                        "playbackSpeed" => Ok(__Field::m_playbackSpeed),
+                        "numSyncPoints" => Ok(__Field::m_numSyncPoints),
+                        "isCyclic" => Ok(__Field::m_isCyclic),
+                        "isMirrored" => Ok(__Field::m_isMirrored),
+                        "isAdditive" => Ok(__Field::m_isAdditive),
+                        "activeInterval" => Ok(__Field::m_activeInterval),
+                        "nativePlaybackSpeed" => Ok(__Field::m_nativePlaybackSpeed),
+                        _ => Ok(__Field::__ignore),
+                    }
+                }
+            }
+            impl<'de> _serde::Deserialize<'de> for __Field {
+                #[inline]
+                fn deserialize<__D>(
+                    __deserializer: __D,
+                ) -> core::result::Result<Self, __D::Error>
+                where
+                    __D: _serde::Deserializer<'de>,
+                {
+                    _serde::Deserializer::deserialize_key(__deserializer, __FieldVisitor)
+                }
+            }
+            struct __hkbGeneratorSyncInfoVisitor<'de> {
+                marker: _serde::__private::PhantomData<hkbGeneratorSyncInfo<'de>>,
+                lifetime: _serde::__private::PhantomData<&'de ()>,
+            }
+            #[allow(clippy::match_single_binding)]
+            #[allow(clippy::reversed_empty_ranges)]
+            #[allow(clippy::single_match)]
+            impl<'de> _serde::de::Visitor<'de> for __hkbGeneratorSyncInfoVisitor<'de> {
+                type Value = hkbGeneratorSyncInfo<'de>;
+                fn expecting(
+                    &self,
+                    __formatter: &mut core::fmt::Formatter,
+                ) -> core::fmt::Result {
+                    core::fmt::Formatter::write_str(
+                        __formatter,
+                        "struct hkbGeneratorSyncInfo",
+                    )
+                }
+                fn visit_struct_for_bytes<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let __ptr = __A::class_ptr(&mut __map);
+                    let mut m_syncPoints: _serde::__private::Option<
+                        [hkbGeneratorSyncInfoSyncPoint<'de>; 16usize],
+                    > = _serde::__private::None;
+                    let mut m_duration: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_localTime: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_playbackSpeed: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_numSyncPoints: _serde::__private::Option<I8<'de>> = _serde::__private::None;
+                    let mut m_isCyclic: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_isMirrored: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_isAdditive: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_activeInterval: _serde::__private::Option<
+                        hkbGeneratorSyncInfoActiveInterval<'de>,
+                    > = _serde::__private::None;
+                    let mut m_nativePlaybackSpeed: _serde::__private::Option<f32> = _serde::__private::None;
+                    for i in 0..10usize {
+                        match i {
+                            0usize => {
+                                if _serde::__private::Option::is_some(&m_syncPoints) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "syncPoints",
+                                        ),
+                                    );
+                                }
+                                m_syncPoints = _serde::__private::Some(
+                                    match __A::next_value::<
+                                        [hkbGeneratorSyncInfoSyncPoint<'de>; 16usize],
+                                    >(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            1usize => {
+                                if _serde::__private::Option::is_some(&m_duration) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "duration",
+                                        ),
+                                    );
+                                }
+                                m_duration = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            2usize => {
+                                if _serde::__private::Option::is_some(&m_localTime) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "localTime",
+                                        ),
+                                    );
+                                }
+                                m_localTime = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            3usize => {
+                                if _serde::__private::Option::is_some(&m_playbackSpeed) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "playbackSpeed",
+                                        ),
+                                    );
+                                }
+                                m_playbackSpeed = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            4usize => {
+                                if _serde::__private::Option::is_some(&m_numSyncPoints) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "numSyncPoints",
+                                        ),
+                                    );
+                                }
+                                m_numSyncPoints = _serde::__private::Some(
+                                    match __A::next_value::<I8<'de>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            5usize => {
+                                if _serde::__private::Option::is_some(&m_isCyclic) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isCyclic",
+                                        ),
+                                    );
+                                }
+                                m_isCyclic = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            6usize => {
+                                if _serde::__private::Option::is_some(&m_isMirrored) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isMirrored",
+                                        ),
+                                    );
+                                }
+                                m_isMirrored = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            7usize => {
+                                if _serde::__private::Option::is_some(&m_isAdditive) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isAdditive",
+                                        ),
+                                    );
+                                }
+                                m_isAdditive = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            8usize => {
+                                if _serde::__private::Option::is_some(&m_activeInterval) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "activeInterval",
+                                        ),
+                                    );
+                                }
+                                m_activeInterval = _serde::__private::Some(
+                                    match __A::next_value::<
+                                        hkbGeneratorSyncInfoActiveInterval<'de>,
+                                    >(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            9usize => {
+                                if _serde::__private::Option::is_some(
+                                    &m_nativePlaybackSpeed,
+                                ) {
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "nativePlaybackSpeed",
+                                        ),
+                                    );
+                                }
+                                m_nativePlaybackSpeed = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => {}
+                        }
+                    }
+                    let m_syncPoints = match m_syncPoints {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "syncPoints",
+                                ),
+                            );
+                        }
+                    };
+                    let m_duration = match m_duration {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("duration"),
+                            );
+                        }
+                    };
+                    let m_localTime = match m_localTime {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "localTime",
+                                ),
+                            );
+                        }
+                    };
+                    let m_playbackSpeed = match m_playbackSpeed {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "playbackSpeed",
+                                ),
+                            );
+                        }
+                    };
+                    let m_numSyncPoints = match m_numSyncPoints {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "numSyncPoints",
+                                ),
+                            );
+                        }
+                    };
+                    let m_isCyclic = match m_isCyclic {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("isCyclic"),
+                            );
+                        }
+                    };
+                    let m_isMirrored = match m_isMirrored {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "isMirrored",
+                                ),
+                            );
+                        }
+                    };
+                    let m_isAdditive = match m_isAdditive {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "isAdditive",
+                                ),
+                            );
+                        }
+                    };
+                    let m_activeInterval = match m_activeInterval {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "activeInterval",
+                                ),
+                            );
+                        }
+                    };
+                    let m_nativePlaybackSpeed = match m_nativePlaybackSpeed {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "nativePlaybackSpeed",
+                                ),
+                            );
+                        }
+                    };
+                    _serde::__private::Ok(hkbGeneratorSyncInfo {
+                        __ptr,
+                        m_syncPoints,
+                        m_duration,
+                        m_localTime,
+                        m_playbackSpeed,
+                        m_numSyncPoints,
+                        m_isCyclic,
+                        m_isMirrored,
+                        m_isAdditive,
+                        m_activeInterval,
+                        m_nativePlaybackSpeed,
+                    })
+                }
+                #[allow(clippy::manual_unwrap_or_default)]
+                fn visit_struct<__A>(
+                    self,
+                    mut __map: __A,
+                ) -> _serde::__private::Result<Self::Value, __A::Error>
+                where
+                    __A: _serde::de::MapAccess<'de>,
+                {
+                    let mut m_syncPoints: _serde::__private::Option<
+                        [hkbGeneratorSyncInfoSyncPoint<'de>; 16usize],
+                    > = _serde::__private::None;
+                    let mut m_duration: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_localTime: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_playbackSpeed: _serde::__private::Option<f32> = _serde::__private::None;
+                    let mut m_numSyncPoints: _serde::__private::Option<I8<'de>> = _serde::__private::None;
+                    let mut m_isCyclic: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_isMirrored: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_isAdditive: _serde::__private::Option<bool> = _serde::__private::None;
+                    let mut m_activeInterval: _serde::__private::Option<
+                        hkbGeneratorSyncInfoActiveInterval<'de>,
+                    > = _serde::__private::None;
+                    let mut m_nativePlaybackSpeed: _serde::__private::Option<f32> = _serde::__private::None;
+                    while let _serde::__private::Some(__key) = {
+                        __A::next_key::<__Field>(&mut __map)?
+                    } {
+                        match __key {
+                            __Field::m_syncPoints => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_syncPoints) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "syncPoints",
+                                        ),
+                                    );
+                                }
+                                m_syncPoints = _serde::__private::Some(
+                                    match __A::next_value::<
+                                        [hkbGeneratorSyncInfoSyncPoint<'de>; 16usize],
+                                    >(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_duration => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_duration) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "duration",
+                                        ),
+                                    );
+                                }
+                                m_duration = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_localTime => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_localTime) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "localTime",
+                                        ),
+                                    );
+                                }
+                                m_localTime = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_playbackSpeed => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_playbackSpeed) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "playbackSpeed",
+                                        ),
+                                    );
+                                }
+                                m_playbackSpeed = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_numSyncPoints => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_numSyncPoints) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "numSyncPoints",
+                                        ),
+                                    );
+                                }
+                                m_numSyncPoints = _serde::__private::Some(
+                                    match __A::next_value::<I8<'de>>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_isCyclic => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_isCyclic) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isCyclic",
+                                        ),
+                                    );
+                                }
+                                m_isCyclic = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_isMirrored => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_isMirrored) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isMirrored",
+                                        ),
+                                    );
+                                }
+                                m_isMirrored = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_isAdditive => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_isAdditive) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "isAdditive",
+                                        ),
+                                    );
+                                }
+                                m_isAdditive = _serde::__private::Some(
+                                    match __A::next_value::<bool>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_activeInterval => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(&m_activeInterval) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "activeInterval",
+                                        ),
+                                    );
+                                }
+                                m_activeInterval = _serde::__private::Some(
+                                    match __A::next_value::<
+                                        hkbGeneratorSyncInfoActiveInterval<'de>,
+                                    >(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            __Field::m_nativePlaybackSpeed => {
+                                #[cfg(
+                                    any(feature = "strict", feature = "ignore_duplicates")
+                                )]
+                                if _serde::__private::Option::is_some(
+                                    &m_nativePlaybackSpeed,
+                                ) {
+                                    #[cfg(feature = "ignore_duplicates")]
+                                    {
+                                        __A::skip_value(&mut __map)?;
+                                        continue;
+                                    }
+                                    #[cfg(feature = "strict")]
+                                    return _serde::__private::Err(
+                                        <__A::Error as _serde::de::Error>::duplicate_field(
+                                            "nativePlaybackSpeed",
+                                        ),
+                                    );
+                                }
+                                m_nativePlaybackSpeed = _serde::__private::Some(
+                                    match __A::next_value::<f32>(&mut __map) {
+                                        _serde::__private::Ok(__val) => __val,
+                                        _serde::__private::Err(__err) => {
+                                            return _serde::__private::Err(__err);
+                                        }
+                                    },
+                                );
+                            }
+                            _ => __A::skip_value(&mut __map)?,
+                        }
+                    }
+                    let m_syncPoints = match m_syncPoints {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "syncPoints",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_duration = match m_duration {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("duration"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_localTime = match m_localTime {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "localTime",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_playbackSpeed = match m_playbackSpeed {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "playbackSpeed",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_numSyncPoints = match m_numSyncPoints {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "numSyncPoints",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_isCyclic = match m_isCyclic {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field("isCyclic"),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_isMirrored = match m_isMirrored {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "isMirrored",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_isAdditive = match m_isAdditive {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "isAdditive",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_activeInterval = match m_activeInterval {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "activeInterval",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let m_nativePlaybackSpeed = match m_nativePlaybackSpeed {
+                        _serde::__private::Some(__field) => __field,
+                        _serde::__private::None => {
+                            #[cfg(feature = "strict")]
+                            return _serde::__private::Err(
+                                <__A::Error as _serde::de::Error>::missing_field(
+                                    "nativePlaybackSpeed",
+                                ),
+                            );
+                            #[cfg(not(feature = "strict"))] Default::default()
+                        }
+                    };
+                    let __ptr = __A::class_ptr(&mut __map);
+                    _serde::__private::Ok(hkbGeneratorSyncInfo {
+                        __ptr: __ptr.clone(),
+                        m_syncPoints,
+                        m_duration,
+                        m_localTime,
+                        m_playbackSpeed,
+                        m_numSyncPoints,
+                        m_isCyclic,
+                        m_isMirrored,
+                        m_isAdditive,
+                        m_activeInterval,
+                        m_nativePlaybackSpeed,
+                    })
+                }
+            }
+            const FIELDS: &[&str] = &[
+                "syncPoints",
+                "duration",
+                "localTime",
+                "playbackSpeed",
+                "numSyncPoints",
+                "isCyclic",
+                "isMirrored",
+                "isAdditive",
+                "activeInterval",
+                "nativePlaybackSpeed",
+            ];
+            _serde::Deserializer::deserialize_struct(
+                deserializer,
+                "hkbGeneratorSyncInfo",
+                FIELDS,
+                __hkbGeneratorSyncInfoVisitor {
+                    marker: _serde::__private::PhantomData::<hkbGeneratorSyncInfo>,
+                    lifetime: _serde::__private::PhantomData,
+                },
+            )
+        }
+    }
+};
