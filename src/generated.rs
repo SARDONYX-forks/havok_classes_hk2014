@@ -123,6 +123,8 @@ pub mod hclBendStiffnessConstraintSetMxBatch_;
 pub use hclBendStiffnessConstraintSetMxBatch_::*;
 pub mod hclBendStiffnessConstraintSetMxSingle_;
 pub use hclBendStiffnessConstraintSetMxSingle_::*;
+pub mod hclBendStiffnessSetupObject_;
+pub use hclBendStiffnessSetupObject_::*;
 pub mod hclBlendSomeVerticesOperator_;
 pub use hclBlendSomeVerticesOperator_::*;
 pub mod hclBlendSomeVerticesOperatorBlendEntry_;
@@ -185,6 +187,8 @@ pub mod hclBufferLayoutBufferElement_;
 pub use hclBufferLayoutBufferElement_::*;
 pub mod hclBufferLayoutSlot_;
 pub use hclBufferLayoutSlot_::*;
+pub mod hclBufferSetupObject_;
+pub use hclBufferSetupObject_::*;
 pub mod hclBufferUsage_;
 pub use hclBufferUsage_::*;
 pub mod hclCapsuleShape_;
@@ -193,10 +197,16 @@ pub mod hclClothContainer_;
 pub use hclClothContainer_::*;
 pub mod hclClothData_;
 pub use hclClothData_::*;
+pub mod hclClothSetupContainer_;
+pub use hclClothSetupContainer_::*;
+pub mod hclClothSetupObject_;
+pub use hclClothSetupObject_::*;
 pub mod hclClothState_;
 pub use hclClothState_::*;
 pub mod hclClothStateBufferAccess_;
 pub use hclClothStateBufferAccess_::*;
+pub mod hclClothStateSetupObject_;
+pub use hclClothStateSetupObject_::*;
 pub mod hclClothStateTransformSetAccess_;
 pub use hclClothStateTransformSetAccess_::*;
 pub mod hclCollidable_;
@@ -213,6 +223,8 @@ pub mod hclCompressibleLinkConstraintSetMxSingle_;
 pub use hclCompressibleLinkConstraintSetMxSingle_::*;
 pub mod hclConstraintSet_;
 pub use hclConstraintSet_::*;
+pub mod hclConstraintSetSetupObject_;
+pub use hclConstraintSetSetupObject_::*;
 pub mod hclConvexGeometryShape_;
 pub use hclConvexGeometryShape_::*;
 pub mod hclConvexHeightFieldShape_;
@@ -221,6 +233,8 @@ pub mod hclConvexPlanesShape_;
 pub use hclConvexPlanesShape_::*;
 pub mod hclCopyVerticesOperator_;
 pub use hclCopyVerticesOperator_::*;
+pub mod hclEdgeSelectionInput_;
+pub use hclEdgeSelectionInput_::*;
 pub mod hclGatherAllVerticesOperator_;
 pub use hclGatherAllVerticesOperator_::*;
 pub mod hclGatherSomeVerticesOperator_;
@@ -233,18 +247,28 @@ pub mod hclLocalRangeConstraintSet_;
 pub use hclLocalRangeConstraintSet_::*;
 pub mod hclLocalRangeConstraintSetLocalConstraint_;
 pub use hclLocalRangeConstraintSetLocalConstraint_::*;
+pub mod hclLocalRangeSetupObject_;
+pub use hclLocalRangeSetupObject_::*;
 pub mod hclMeshBoneDeformOperator_;
 pub use hclMeshBoneDeformOperator_::*;
 pub mod hclMeshBoneDeformOperatorTriangleBonePair_;
 pub use hclMeshBoneDeformOperatorTriangleBonePair_::*;
+pub mod hclMeshBoneDeformSetupObject_;
+pub use hclMeshBoneDeformSetupObject_::*;
 pub mod hclMeshMeshDeformOperator_;
 pub use hclMeshMeshDeformOperator_::*;
 pub mod hclMeshMeshDeformOperatorTriangleVertexPair_;
 pub use hclMeshMeshDeformOperatorTriangleVertexPair_::*;
+pub mod hclMoveFixedParticlesSetupObject_;
+pub use hclMoveFixedParticlesSetupObject_::*;
 pub mod hclMoveParticlesOperator_;
 pub use hclMoveParticlesOperator_::*;
 pub mod hclMoveParticlesOperatorVertexParticlePair_;
 pub use hclMoveParticlesOperatorVertexParticlePair_::*;
+pub mod hclNamedSetupMesh_;
+pub use hclNamedSetupMesh_::*;
+pub mod hclNamedTransformSetSetupObject_;
+pub use hclNamedTransformSetSetupObject_::*;
 pub mod hclObjectSpaceDeformer_;
 pub use hclObjectSpaceDeformer_::*;
 pub mod hclObjectSpaceDeformerFourBlendEntryBlock_;
@@ -293,6 +317,8 @@ pub mod hclObjectSpaceSkinPOperator_;
 pub use hclObjectSpaceSkinPOperator_::*;
 pub mod hclOperator_;
 pub use hclOperator_::*;
+pub mod hclOperatorSetupObject_;
+pub use hclOperatorSetupObject_::*;
 pub mod hclOutputConvertOperator_;
 pub use hclOutputConvertOperator_::*;
 pub mod hclPlaneShape_;
@@ -305,10 +331,16 @@ pub mod hclRuntimeConversionInfoSlotConversion_;
 pub use hclRuntimeConversionInfoSlotConversion_::*;
 pub mod hclScratchBufferDefinition_;
 pub use hclScratchBufferDefinition_::*;
+pub mod hclScratchBufferSetupObject_;
+pub use hclScratchBufferSetupObject_::*;
+pub mod hclSetupMesh_;
+pub use hclSetupMesh_::*;
 pub mod hclShadowBufferDefinition_;
 pub use hclShadowBufferDefinition_::*;
 pub mod hclShape_;
 pub use hclShape_::*;
+pub mod hclSimClothBufferSetupObject_;
+pub use hclSimClothBufferSetupObject_::*;
 pub mod hclSimClothData_;
 pub use hclSimClothData_::*;
 pub mod hclSimClothDataCollidablePinchingData_;
@@ -325,6 +357,12 @@ pub mod hclSimClothDataTransferMotionData_;
 pub use hclSimClothDataTransferMotionData_::*;
 pub mod hclSimClothPose_;
 pub use hclSimClothPose_::*;
+pub mod hclSimClothSetupObject_;
+pub use hclSimClothSetupObject_::*;
+pub mod hclSimClothSetupObjectPerInstanceCollidable_;
+pub use hclSimClothSetupObjectPerInstanceCollidable_::*;
+pub mod hclSimClothSetupObjectTransferMotionSetupData_;
+pub use hclSimClothSetupObjectTransferMotionSetupData_::*;
 pub mod hclSimpleMeshBoneDeformOperator_;
 pub use hclSimpleMeshBoneDeformOperator_::*;
 pub mod hclSimpleMeshBoneDeformOperatorTriangleBonePair_;
@@ -333,10 +371,18 @@ pub mod hclSimpleWindAction_;
 pub use hclSimpleWindAction_::*;
 pub mod hclSimulateOperator_;
 pub use hclSimulateOperator_::*;
+pub mod hclSimulateSetupObject_;
+pub use hclSimulateSetupObject_::*;
+pub mod hclSimulationSetupMesh_;
+pub use hclSimulationSetupMesh_::*;
+pub mod hclSimulationSetupMeshMapOptions_;
+pub use hclSimulationSetupMeshMapOptions_::*;
 pub mod hclSkinOperator_;
 pub use hclSkinOperator_::*;
 pub mod hclSkinOperatorBoneInfluence_;
 pub use hclSkinOperatorBoneInfluence_::*;
+pub mod hclSkinSetupObject_;
+pub use hclSkinSetupObject_::*;
 pub mod hclSphereShape_;
 pub use hclSphereShape_::*;
 pub mod hclStandardLinkConstraintSet_;
@@ -349,6 +395,10 @@ pub mod hclStandardLinkConstraintSetMxBatch_;
 pub use hclStandardLinkConstraintSetMxBatch_::*;
 pub mod hclStandardLinkConstraintSetMxSingle_;
 pub use hclStandardLinkConstraintSetMxSingle_::*;
+pub mod hclStandardLinkSetupObject_;
+pub use hclStandardLinkSetupObject_::*;
+pub mod hclStaticDisplayBufferSetupObject_;
+pub use hclStaticDisplayBufferSetupObject_::*;
 pub mod hclStaticShadowBufferDefinition_;
 pub use hclStaticShadowBufferDefinition_::*;
 pub mod hclStretchLinkConstraintSet_;
@@ -361,10 +411,14 @@ pub mod hclStretchLinkConstraintSetMxBatch_;
 pub use hclStretchLinkConstraintSetMxBatch_::*;
 pub mod hclStretchLinkConstraintSetMxSingle_;
 pub use hclStretchLinkConstraintSetMxSingle_::*;
+pub mod hclStretchLinkSetupObject_;
+pub use hclStretchLinkSetupObject_::*;
 pub mod hclTaperedCapsuleShape_;
 pub use hclTaperedCapsuleShape_::*;
 pub mod hclTransformSetDefinition_;
 pub use hclTransformSetDefinition_::*;
+pub mod hclTransformSetSetupObject_;
+pub use hclTransformSetSetupObject_::*;
 pub mod hclTransformSetUsage_;
 pub use hclTransformSetUsage_::*;
 pub mod hclTransformSetUsageTransformTracker_;
@@ -373,12 +427,20 @@ pub mod hclTransitionConstraintSet_;
 pub use hclTransitionConstraintSet_::*;
 pub mod hclTransitionConstraintSetPerParticle_;
 pub use hclTransitionConstraintSetPerParticle_::*;
+pub mod hclTriangleSelectionInput_;
+pub use hclTriangleSelectionInput_::*;
 pub mod hclUpdateAllVertexFramesOperator_;
 pub use hclUpdateAllVertexFramesOperator_::*;
 pub mod hclUpdateSomeVertexFramesOperator_;
 pub use hclUpdateSomeVertexFramesOperator_::*;
 pub mod hclUpdateSomeVertexFramesOperatorTriangle_;
 pub use hclUpdateSomeVertexFramesOperatorTriangle_::*;
+pub mod hclVertexFloatInput_;
+pub use hclVertexFloatInput_::*;
+pub mod hclVertexGatherSetupObject_;
+pub use hclVertexGatherSetupObject_::*;
+pub mod hclVertexSelectionInput_;
+pub use hclVertexSelectionInput_::*;
 pub mod hclVolumeConstraint_;
 pub use hclVolumeConstraint_::*;
 pub mod hclVolumeConstraintApplyData_;
@@ -395,6 +457,8 @@ pub mod hclVolumeConstraintMxFrameBatchData_;
 pub use hclVolumeConstraintMxFrameBatchData_::*;
 pub mod hclVolumeConstraintMxFrameSingleData_;
 pub use hclVolumeConstraintMxFrameSingleData_::*;
+pub mod hclVolumeConstraintSetupObject_;
+pub use hclVolumeConstraintSetupObject_::*;
 pub mod hkAabb_;
 pub use hkAabb_::*;
 pub mod hkAabb16_;
@@ -1629,8 +1693,20 @@ pub mod hkpFixedConstraintData_;
 pub use hkpFixedConstraintData_::*;
 pub mod hkpFixedConstraintDataAtoms_;
 pub use hkpFixedConstraintDataAtoms_::*;
+pub mod hkpHingeConstraintData_;
+pub use hkpHingeConstraintData_::*;
+pub mod hkpHingeConstraintDataAtoms_;
+pub use hkpHingeConstraintDataAtoms_::*;
+pub mod hkpHingeLimitsData_;
+pub use hkpHingeLimitsData_::*;
+pub mod hkpHingeLimitsDataAtoms_;
+pub use hkpHingeLimitsDataAtoms_::*;
 pub mod hkpLimitedForceConstraintMotor_;
 pub use hkpLimitedForceConstraintMotor_::*;
+pub mod hkpLimitedHingeConstraintData_;
+pub use hkpLimitedHingeConstraintData_::*;
+pub mod hkpLimitedHingeConstraintDataAtoms_;
+pub use hkpLimitedHingeConstraintDataAtoms_::*;
 pub mod hkpLinConstraintAtom_;
 pub use hkpLinConstraintAtom_::*;
 pub mod hkpLinearClearanceConstraintData_;
@@ -1719,6 +1795,10 @@ pub mod hkpVehicleFrictionStatusAxisStatus_;
 pub use hkpVehicleFrictionStatusAxisStatus_::*;
 pub mod hkpVelocityConstraintMotor_;
 pub use hkpVelocityConstraintMotor_::*;
+pub mod hkpWheelConstraintData_;
+pub use hkpWheelConstraintData_::*;
+pub mod hkpWheelConstraintDataAtoms_;
+pub use hkpWheelConstraintDataAtoms_::*;
 pub mod hkpWheelFrictionConstraintAtom_;
 pub use hkpWheelFrictionConstraintAtom_::*;
 pub mod hkpWheelFrictionConstraintAtomAxle_;
@@ -1985,6 +2065,8 @@ pub enum Classes<'a> {
         Box<hclBendStiffnessConstraintSetMxSingle<'a>>,
     ),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclBendStiffnessSetupObject(Box<hclBendStiffnessSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclBlendSomeVerticesOperator(Box<hclBlendSomeVerticesOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclBlendSomeVerticesOperatorBlendEntry(
@@ -2069,6 +2151,8 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclBufferLayoutSlot(Box<hclBufferLayoutSlot<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclBufferSetupObject(Box<hclBufferSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclBufferUsage(Box<hclBufferUsage<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclCapsuleShape(Box<hclCapsuleShape<'a>>),
@@ -2077,9 +2161,15 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclClothData(Box<hclClothData<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclClothSetupContainer(Box<hclClothSetupContainer<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclClothSetupObject(Box<hclClothSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclClothState(Box<hclClothState<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclClothStateBufferAccess(Box<hclClothStateBufferAccess<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclClothStateSetupObject(Box<hclClothStateSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclClothStateTransformSetAccess(Box<hclClothStateTransformSetAccess<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2101,6 +2191,8 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclConstraintSet(Box<hclConstraintSet<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclConstraintSetSetupObject(Box<hclConstraintSetSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclConvexGeometryShape(Box<hclConvexGeometryShape<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclConvexHeightFieldShape(Box<hclConvexHeightFieldShape<'a>>),
@@ -2108,6 +2200,8 @@ pub enum Classes<'a> {
     hclConvexPlanesShape(Box<hclConvexPlanesShape<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclCopyVerticesOperator(Box<hclCopyVerticesOperator<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclEdgeSelectionInput(Box<hclEdgeSelectionInput<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclGatherAllVerticesOperator(Box<hclGatherAllVerticesOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2125,11 +2219,15 @@ pub enum Classes<'a> {
         Box<hclLocalRangeConstraintSetLocalConstraint<'a>>,
     ),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclLocalRangeSetupObject(Box<hclLocalRangeSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclMeshBoneDeformOperator(Box<hclMeshBoneDeformOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclMeshBoneDeformOperatorTriangleBonePair(
         Box<hclMeshBoneDeformOperatorTriangleBonePair<'a>>,
     ),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclMeshBoneDeformSetupObject(Box<hclMeshBoneDeformSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclMeshMeshDeformOperator(Box<hclMeshMeshDeformOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2137,11 +2235,17 @@ pub enum Classes<'a> {
         Box<hclMeshMeshDeformOperatorTriangleVertexPair<'a>>,
     ),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclMoveFixedParticlesSetupObject(Box<hclMoveFixedParticlesSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclMoveParticlesOperator(Box<hclMoveParticlesOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclMoveParticlesOperatorVertexParticlePair(
         Box<hclMoveParticlesOperatorVertexParticlePair<'a>>,
     ),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclNamedSetupMesh(Box<hclNamedSetupMesh<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclNamedTransformSetSetupObject(Box<hclNamedTransformSetSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclObjectSpaceDeformer(Box<hclObjectSpaceDeformer<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2215,6 +2319,8 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclOperator(Box<hclOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclOperatorSetupObject(Box<hclOperatorSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclOutputConvertOperator(Box<hclOutputConvertOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclPlaneShape(Box<hclPlaneShape<'a>>),
@@ -2231,9 +2337,15 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclScratchBufferDefinition(Box<hclScratchBufferDefinition<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclScratchBufferSetupObject(Box<hclScratchBufferSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSetupMesh(Box<hclSetupMesh<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclShadowBufferDefinition(Box<hclShadowBufferDefinition<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclShape(Box<hclShape<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimClothBufferSetupObject(Box<hclSimClothBufferSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSimClothData(Box<hclSimClothData<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2259,6 +2371,16 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSimClothPose(Box<hclSimClothPose<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimClothSetupObject(Box<hclSimClothSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimClothSetupObjectPerInstanceCollidable(
+        Box<hclSimClothSetupObjectPerInstanceCollidable<'a>>,
+    ),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimClothSetupObjectTransferMotionSetupData(
+        Box<hclSimClothSetupObjectTransferMotionSetupData<'a>>,
+    ),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclSimpleMeshBoneDeformOperator(Box<hclSimpleMeshBoneDeformOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSimpleMeshBoneDeformOperatorTriangleBonePair(
@@ -2269,9 +2391,17 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSimulateOperator(Box<hclSimulateOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimulateSetupObject(Box<hclSimulateSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimulationSetupMesh(Box<hclSimulationSetupMesh<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSimulationSetupMeshMapOptions(Box<hclSimulationSetupMeshMapOptions<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclSkinOperator(Box<hclSkinOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSkinOperatorBoneInfluence(Box<hclSkinOperatorBoneInfluence<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclSkinSetupObject(Box<hclSkinSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclSphereShape(Box<hclSphereShape<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2285,6 +2415,10 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclStandardLinkConstraintSetMxSingle(Box<hclStandardLinkConstraintSetMxSingle<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclStandardLinkSetupObject(Box<hclStandardLinkSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclStaticDisplayBufferSetupObject(Box<hclStaticDisplayBufferSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclStaticShadowBufferDefinition(Box<hclStaticShadowBufferDefinition<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclStretchLinkConstraintSet(Box<hclStretchLinkConstraintSet<'a>>),
@@ -2297,9 +2431,13 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclStretchLinkConstraintSetMxSingle(Box<hclStretchLinkConstraintSetMxSingle<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclStretchLinkSetupObject(Box<hclStretchLinkSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclTaperedCapsuleShape(Box<hclTaperedCapsuleShape<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclTransformSetDefinition(Box<hclTransformSetDefinition<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclTransformSetSetupObject(Box<hclTransformSetSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclTransformSetUsage(Box<hclTransformSetUsage<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2311,6 +2449,8 @@ pub enum Classes<'a> {
         Box<hclTransitionConstraintSetPerParticle<'a>>,
     ),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hclTriangleSelectionInput(Box<hclTriangleSelectionInput<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hclUpdateAllVertexFramesOperator(Box<hclUpdateAllVertexFramesOperator<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclUpdateSomeVertexFramesOperator(Box<hclUpdateSomeVertexFramesOperator<'a>>),
@@ -2318,6 +2458,12 @@ pub enum Classes<'a> {
     hclUpdateSomeVertexFramesOperatorTriangle(
         Box<hclUpdateSomeVertexFramesOperatorTriangle<'a>>,
     ),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclVertexFloatInput(Box<hclVertexFloatInput<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclVertexGatherSetupObject(Box<hclVertexGatherSetupObject<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclVertexSelectionInput(Box<hclVertexSelectionInput<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclVolumeConstraint(Box<hclVolumeConstraint<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -2334,6 +2480,8 @@ pub enum Classes<'a> {
     hclVolumeConstraintMxFrameBatchData(Box<hclVolumeConstraintMxFrameBatchData<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hclVolumeConstraintMxFrameSingleData(Box<hclVolumeConstraintMxFrameSingleData<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hclVolumeConstraintSetupObject(Box<hclVolumeConstraintSetupObject<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hkAabb(Box<hkAabb<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -3779,7 +3927,19 @@ pub enum Classes<'a> {
     #[cfg_attr(feature = "serde", serde(borrow))]
     hkpFixedConstraintDataAtoms(Box<hkpFixedConstraintDataAtoms<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpHingeConstraintData(Box<hkpHingeConstraintData<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpHingeConstraintDataAtoms(Box<hkpHingeConstraintDataAtoms<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpHingeLimitsData(Box<hkpHingeLimitsData<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpHingeLimitsDataAtoms(Box<hkpHingeLimitsDataAtoms<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
     hkpLimitedForceConstraintMotor(Box<hkpLimitedForceConstraintMotor<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpLimitedHingeConstraintData(Box<hkpLimitedHingeConstraintData<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpLimitedHingeConstraintDataAtoms(Box<hkpLimitedHingeConstraintDataAtoms<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hkpLinConstraintAtom(Box<hkpLinConstraintAtom<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -3874,6 +4034,10 @@ pub enum Classes<'a> {
     hkpVehicleFrictionStatusAxisStatus(Box<hkpVehicleFrictionStatusAxisStatus<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hkpVelocityConstraintMotor(Box<hkpVelocityConstraintMotor<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpWheelConstraintData(Box<hkpWheelConstraintData<'a>>),
+    #[cfg_attr(feature = "serde", serde(borrow))]
+    hkpWheelConstraintDataAtoms(Box<hkpWheelConstraintDataAtoms<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
     hkpWheelFrictionConstraintAtom(Box<hkpWheelFrictionConstraintAtom<'a>>),
     #[cfg_attr(feature = "serde", serde(borrow))]
@@ -4107,6 +4271,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBendStiffnessConstraintSetMx(class) => class.name(),
             Classes::hclBendStiffnessConstraintSetMxBatch(class) => class.name(),
             Classes::hclBendStiffnessConstraintSetMxSingle(class) => class.name(),
+            Classes::hclBendStiffnessSetupObject(class) => class.name(),
             Classes::hclBlendSomeVerticesOperator(class) => class.name(),
             Classes::hclBlendSomeVerticesOperatorBlendEntry(class) => class.name(),
             Classes::hclBonePlanesConstraintSet(class) => class.name(),
@@ -4138,12 +4303,16 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBufferLayout(class) => class.name(),
             Classes::hclBufferLayoutBufferElement(class) => class.name(),
             Classes::hclBufferLayoutSlot(class) => class.name(),
+            Classes::hclBufferSetupObject(class) => class.name(),
             Classes::hclBufferUsage(class) => class.name(),
             Classes::hclCapsuleShape(class) => class.name(),
             Classes::hclClothContainer(class) => class.name(),
             Classes::hclClothData(class) => class.name(),
+            Classes::hclClothSetupContainer(class) => class.name(),
+            Classes::hclClothSetupObject(class) => class.name(),
             Classes::hclClothState(class) => class.name(),
             Classes::hclClothStateBufferAccess(class) => class.name(),
+            Classes::hclClothStateSetupObject(class) => class.name(),
             Classes::hclClothStateTransformSetAccess(class) => class.name(),
             Classes::hclCollidable(class) => class.name(),
             Classes::hclCompressibleLinkConstraintSet(class) => class.name(),
@@ -4152,22 +4321,29 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclCompressibleLinkConstraintSetMxBatch(class) => class.name(),
             Classes::hclCompressibleLinkConstraintSetMxSingle(class) => class.name(),
             Classes::hclConstraintSet(class) => class.name(),
+            Classes::hclConstraintSetSetupObject(class) => class.name(),
             Classes::hclConvexGeometryShape(class) => class.name(),
             Classes::hclConvexHeightFieldShape(class) => class.name(),
             Classes::hclConvexPlanesShape(class) => class.name(),
             Classes::hclCopyVerticesOperator(class) => class.name(),
+            Classes::hclEdgeSelectionInput(class) => class.name(),
             Classes::hclGatherAllVerticesOperator(class) => class.name(),
             Classes::hclGatherSomeVerticesOperator(class) => class.name(),
             Classes::hclGatherSomeVerticesOperatorVertexPair(class) => class.name(),
             Classes::hclInputConvertOperator(class) => class.name(),
             Classes::hclLocalRangeConstraintSet(class) => class.name(),
             Classes::hclLocalRangeConstraintSetLocalConstraint(class) => class.name(),
+            Classes::hclLocalRangeSetupObject(class) => class.name(),
             Classes::hclMeshBoneDeformOperator(class) => class.name(),
             Classes::hclMeshBoneDeformOperatorTriangleBonePair(class) => class.name(),
+            Classes::hclMeshBoneDeformSetupObject(class) => class.name(),
             Classes::hclMeshMeshDeformOperator(class) => class.name(),
             Classes::hclMeshMeshDeformOperatorTriangleVertexPair(class) => class.name(),
+            Classes::hclMoveFixedParticlesSetupObject(class) => class.name(),
             Classes::hclMoveParticlesOperator(class) => class.name(),
             Classes::hclMoveParticlesOperatorVertexParticlePair(class) => class.name(),
+            Classes::hclNamedSetupMesh(class) => class.name(),
+            Classes::hclNamedTransformSetSetupObject(class) => class.name(),
             Classes::hclObjectSpaceDeformer(class) => class.name(),
             Classes::hclObjectSpaceDeformerFourBlendEntryBlock(class) => class.name(),
             Classes::hclObjectSpaceDeformerLocalBlockP(class) => class.name(),
@@ -4192,14 +4368,18 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclObjectSpaceSkinPNTOperator(class) => class.name(),
             Classes::hclObjectSpaceSkinPOperator(class) => class.name(),
             Classes::hclOperator(class) => class.name(),
+            Classes::hclOperatorSetupObject(class) => class.name(),
             Classes::hclOutputConvertOperator(class) => class.name(),
             Classes::hclPlaneShape(class) => class.name(),
             Classes::hclRuntimeConversionInfo(class) => class.name(),
             Classes::hclRuntimeConversionInfoElementConversion(class) => class.name(),
             Classes::hclRuntimeConversionInfoSlotConversion(class) => class.name(),
             Classes::hclScratchBufferDefinition(class) => class.name(),
+            Classes::hclScratchBufferSetupObject(class) => class.name(),
+            Classes::hclSetupMesh(class) => class.name(),
             Classes::hclShadowBufferDefinition(class) => class.name(),
             Classes::hclShape(class) => class.name(),
+            Classes::hclSimClothBufferSetupObject(class) => class.name(),
             Classes::hclSimClothData(class) => class.name(),
             Classes::hclSimClothDataCollidablePinchingData(class) => class.name(),
             Classes::hclSimClothDataCollidableTransformMap(class) => class.name(),
@@ -4208,35 +4388,50 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclSimClothDataParticleData(class) => class.name(),
             Classes::hclSimClothDataTransferMotionData(class) => class.name(),
             Classes::hclSimClothPose(class) => class.name(),
+            Classes::hclSimClothSetupObject(class) => class.name(),
+            Classes::hclSimClothSetupObjectPerInstanceCollidable(class) => class.name(),
+            Classes::hclSimClothSetupObjectTransferMotionSetupData(class) => class.name(),
             Classes::hclSimpleMeshBoneDeformOperator(class) => class.name(),
             Classes::hclSimpleMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.name()
             }
             Classes::hclSimpleWindAction(class) => class.name(),
             Classes::hclSimulateOperator(class) => class.name(),
+            Classes::hclSimulateSetupObject(class) => class.name(),
+            Classes::hclSimulationSetupMesh(class) => class.name(),
+            Classes::hclSimulationSetupMeshMapOptions(class) => class.name(),
             Classes::hclSkinOperator(class) => class.name(),
             Classes::hclSkinOperatorBoneInfluence(class) => class.name(),
+            Classes::hclSkinSetupObject(class) => class.name(),
             Classes::hclSphereShape(class) => class.name(),
             Classes::hclStandardLinkConstraintSet(class) => class.name(),
             Classes::hclStandardLinkConstraintSetLink(class) => class.name(),
             Classes::hclStandardLinkConstraintSetMx(class) => class.name(),
             Classes::hclStandardLinkConstraintSetMxBatch(class) => class.name(),
             Classes::hclStandardLinkConstraintSetMxSingle(class) => class.name(),
+            Classes::hclStandardLinkSetupObject(class) => class.name(),
+            Classes::hclStaticDisplayBufferSetupObject(class) => class.name(),
             Classes::hclStaticShadowBufferDefinition(class) => class.name(),
             Classes::hclStretchLinkConstraintSet(class) => class.name(),
             Classes::hclStretchLinkConstraintSetLink(class) => class.name(),
             Classes::hclStretchLinkConstraintSetMx(class) => class.name(),
             Classes::hclStretchLinkConstraintSetMxBatch(class) => class.name(),
             Classes::hclStretchLinkConstraintSetMxSingle(class) => class.name(),
+            Classes::hclStretchLinkSetupObject(class) => class.name(),
             Classes::hclTaperedCapsuleShape(class) => class.name(),
             Classes::hclTransformSetDefinition(class) => class.name(),
+            Classes::hclTransformSetSetupObject(class) => class.name(),
             Classes::hclTransformSetUsage(class) => class.name(),
             Classes::hclTransformSetUsageTransformTracker(class) => class.name(),
             Classes::hclTransitionConstraintSet(class) => class.name(),
             Classes::hclTransitionConstraintSetPerParticle(class) => class.name(),
+            Classes::hclTriangleSelectionInput(class) => class.name(),
             Classes::hclUpdateAllVertexFramesOperator(class) => class.name(),
             Classes::hclUpdateSomeVertexFramesOperator(class) => class.name(),
             Classes::hclUpdateSomeVertexFramesOperatorTriangle(class) => class.name(),
+            Classes::hclVertexFloatInput(class) => class.name(),
+            Classes::hclVertexGatherSetupObject(class) => class.name(),
+            Classes::hclVertexSelectionInput(class) => class.name(),
             Classes::hclVolumeConstraint(class) => class.name(),
             Classes::hclVolumeConstraintApplyData(class) => class.name(),
             Classes::hclVolumeConstraintFrameData(class) => class.name(),
@@ -4245,6 +4440,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclVolumeConstraintMxApplySingleData(class) => class.name(),
             Classes::hclVolumeConstraintMxFrameBatchData(class) => class.name(),
             Classes::hclVolumeConstraintMxFrameSingleData(class) => class.name(),
+            Classes::hclVolumeConstraintSetupObject(class) => class.name(),
             Classes::hkAabb(class) => class.name(),
             Classes::hkAabb16(class) => class.name(),
             Classes::hkAabbHalf(class) => class.name(),
@@ -4948,7 +5144,13 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpDeformableLinConstraintAtom(class) => class.name(),
             Classes::hkpFixedConstraintData(class) => class.name(),
             Classes::hkpFixedConstraintDataAtoms(class) => class.name(),
+            Classes::hkpHingeConstraintData(class) => class.name(),
+            Classes::hkpHingeConstraintDataAtoms(class) => class.name(),
+            Classes::hkpHingeLimitsData(class) => class.name(),
+            Classes::hkpHingeLimitsDataAtoms(class) => class.name(),
             Classes::hkpLimitedForceConstraintMotor(class) => class.name(),
+            Classes::hkpLimitedHingeConstraintData(class) => class.name(),
+            Classes::hkpLimitedHingeConstraintDataAtoms(class) => class.name(),
             Classes::hkpLinConstraintAtom(class) => class.name(),
             Classes::hkpLinearClearanceConstraintData(class) => class.name(),
             Classes::hkpLinearClearanceConstraintDataAtoms(class) => class.name(),
@@ -4993,6 +5195,8 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpVehicleFrictionStatus(class) => class.name(),
             Classes::hkpVehicleFrictionStatusAxisStatus(class) => class.name(),
             Classes::hkpVelocityConstraintMotor(class) => class.name(),
+            Classes::hkpWheelConstraintData(class) => class.name(),
+            Classes::hkpWheelConstraintDataAtoms(class) => class.name(),
             Classes::hkpWheelFrictionConstraintAtom(class) => class.name(),
             Classes::hkpWheelFrictionConstraintAtomAxle(class) => class.name(),
             Classes::hkpWheelFrictionConstraintData(class) => class.name(),
@@ -5133,6 +5337,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBendStiffnessConstraintSetMx(class) => class.signature(),
             Classes::hclBendStiffnessConstraintSetMxBatch(class) => class.signature(),
             Classes::hclBendStiffnessConstraintSetMxSingle(class) => class.signature(),
+            Classes::hclBendStiffnessSetupObject(class) => class.signature(),
             Classes::hclBlendSomeVerticesOperator(class) => class.signature(),
             Classes::hclBlendSomeVerticesOperatorBlendEntry(class) => class.signature(),
             Classes::hclBonePlanesConstraintSet(class) => class.signature(),
@@ -5168,12 +5373,16 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBufferLayout(class) => class.signature(),
             Classes::hclBufferLayoutBufferElement(class) => class.signature(),
             Classes::hclBufferLayoutSlot(class) => class.signature(),
+            Classes::hclBufferSetupObject(class) => class.signature(),
             Classes::hclBufferUsage(class) => class.signature(),
             Classes::hclCapsuleShape(class) => class.signature(),
             Classes::hclClothContainer(class) => class.signature(),
             Classes::hclClothData(class) => class.signature(),
+            Classes::hclClothSetupContainer(class) => class.signature(),
+            Classes::hclClothSetupObject(class) => class.signature(),
             Classes::hclClothState(class) => class.signature(),
             Classes::hclClothStateBufferAccess(class) => class.signature(),
+            Classes::hclClothStateSetupObject(class) => class.signature(),
             Classes::hclClothStateTransformSetAccess(class) => class.signature(),
             Classes::hclCollidable(class) => class.signature(),
             Classes::hclCompressibleLinkConstraintSet(class) => class.signature(),
@@ -5182,10 +5391,12 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclCompressibleLinkConstraintSetMxBatch(class) => class.signature(),
             Classes::hclCompressibleLinkConstraintSetMxSingle(class) => class.signature(),
             Classes::hclConstraintSet(class) => class.signature(),
+            Classes::hclConstraintSetSetupObject(class) => class.signature(),
             Classes::hclConvexGeometryShape(class) => class.signature(),
             Classes::hclConvexHeightFieldShape(class) => class.signature(),
             Classes::hclConvexPlanesShape(class) => class.signature(),
             Classes::hclCopyVerticesOperator(class) => class.signature(),
+            Classes::hclEdgeSelectionInput(class) => class.signature(),
             Classes::hclGatherAllVerticesOperator(class) => class.signature(),
             Classes::hclGatherSomeVerticesOperator(class) => class.signature(),
             Classes::hclGatherSomeVerticesOperatorVertexPair(class) => class.signature(),
@@ -5194,18 +5405,23 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclLocalRangeConstraintSetLocalConstraint(class) => {
                 class.signature()
             }
+            Classes::hclLocalRangeSetupObject(class) => class.signature(),
             Classes::hclMeshBoneDeformOperator(class) => class.signature(),
             Classes::hclMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.signature()
             }
+            Classes::hclMeshBoneDeformSetupObject(class) => class.signature(),
             Classes::hclMeshMeshDeformOperator(class) => class.signature(),
             Classes::hclMeshMeshDeformOperatorTriangleVertexPair(class) => {
                 class.signature()
             }
+            Classes::hclMoveFixedParticlesSetupObject(class) => class.signature(),
             Classes::hclMoveParticlesOperator(class) => class.signature(),
             Classes::hclMoveParticlesOperatorVertexParticlePair(class) => {
                 class.signature()
             }
+            Classes::hclNamedSetupMesh(class) => class.signature(),
+            Classes::hclNamedTransformSetSetupObject(class) => class.signature(),
             Classes::hclObjectSpaceDeformer(class) => class.signature(),
             Classes::hclObjectSpaceDeformerFourBlendEntryBlock(class) => {
                 class.signature()
@@ -5242,6 +5458,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclObjectSpaceSkinPNTOperator(class) => class.signature(),
             Classes::hclObjectSpaceSkinPOperator(class) => class.signature(),
             Classes::hclOperator(class) => class.signature(),
+            Classes::hclOperatorSetupObject(class) => class.signature(),
             Classes::hclOutputConvertOperator(class) => class.signature(),
             Classes::hclPlaneShape(class) => class.signature(),
             Classes::hclRuntimeConversionInfo(class) => class.signature(),
@@ -5250,8 +5467,11 @@ impl _serde::HavokClass for Classes<'_> {
             }
             Classes::hclRuntimeConversionInfoSlotConversion(class) => class.signature(),
             Classes::hclScratchBufferDefinition(class) => class.signature(),
+            Classes::hclScratchBufferSetupObject(class) => class.signature(),
+            Classes::hclSetupMesh(class) => class.signature(),
             Classes::hclShadowBufferDefinition(class) => class.signature(),
             Classes::hclShape(class) => class.signature(),
+            Classes::hclSimClothBufferSetupObject(class) => class.signature(),
             Classes::hclSimClothData(class) => class.signature(),
             Classes::hclSimClothDataCollidablePinchingData(class) => class.signature(),
             Classes::hclSimClothDataCollidableTransformMap(class) => class.signature(),
@@ -5260,37 +5480,56 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclSimClothDataParticleData(class) => class.signature(),
             Classes::hclSimClothDataTransferMotionData(class) => class.signature(),
             Classes::hclSimClothPose(class) => class.signature(),
+            Classes::hclSimClothSetupObject(class) => class.signature(),
+            Classes::hclSimClothSetupObjectPerInstanceCollidable(class) => {
+                class.signature()
+            }
+            Classes::hclSimClothSetupObjectTransferMotionSetupData(class) => {
+                class.signature()
+            }
             Classes::hclSimpleMeshBoneDeformOperator(class) => class.signature(),
             Classes::hclSimpleMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.signature()
             }
             Classes::hclSimpleWindAction(class) => class.signature(),
             Classes::hclSimulateOperator(class) => class.signature(),
+            Classes::hclSimulateSetupObject(class) => class.signature(),
+            Classes::hclSimulationSetupMesh(class) => class.signature(),
+            Classes::hclSimulationSetupMeshMapOptions(class) => class.signature(),
             Classes::hclSkinOperator(class) => class.signature(),
             Classes::hclSkinOperatorBoneInfluence(class) => class.signature(),
+            Classes::hclSkinSetupObject(class) => class.signature(),
             Classes::hclSphereShape(class) => class.signature(),
             Classes::hclStandardLinkConstraintSet(class) => class.signature(),
             Classes::hclStandardLinkConstraintSetLink(class) => class.signature(),
             Classes::hclStandardLinkConstraintSetMx(class) => class.signature(),
             Classes::hclStandardLinkConstraintSetMxBatch(class) => class.signature(),
             Classes::hclStandardLinkConstraintSetMxSingle(class) => class.signature(),
+            Classes::hclStandardLinkSetupObject(class) => class.signature(),
+            Classes::hclStaticDisplayBufferSetupObject(class) => class.signature(),
             Classes::hclStaticShadowBufferDefinition(class) => class.signature(),
             Classes::hclStretchLinkConstraintSet(class) => class.signature(),
             Classes::hclStretchLinkConstraintSetLink(class) => class.signature(),
             Classes::hclStretchLinkConstraintSetMx(class) => class.signature(),
             Classes::hclStretchLinkConstraintSetMxBatch(class) => class.signature(),
             Classes::hclStretchLinkConstraintSetMxSingle(class) => class.signature(),
+            Classes::hclStretchLinkSetupObject(class) => class.signature(),
             Classes::hclTaperedCapsuleShape(class) => class.signature(),
             Classes::hclTransformSetDefinition(class) => class.signature(),
+            Classes::hclTransformSetSetupObject(class) => class.signature(),
             Classes::hclTransformSetUsage(class) => class.signature(),
             Classes::hclTransformSetUsageTransformTracker(class) => class.signature(),
             Classes::hclTransitionConstraintSet(class) => class.signature(),
             Classes::hclTransitionConstraintSetPerParticle(class) => class.signature(),
+            Classes::hclTriangleSelectionInput(class) => class.signature(),
             Classes::hclUpdateAllVertexFramesOperator(class) => class.signature(),
             Classes::hclUpdateSomeVertexFramesOperator(class) => class.signature(),
             Classes::hclUpdateSomeVertexFramesOperatorTriangle(class) => {
                 class.signature()
             }
+            Classes::hclVertexFloatInput(class) => class.signature(),
+            Classes::hclVertexGatherSetupObject(class) => class.signature(),
+            Classes::hclVertexSelectionInput(class) => class.signature(),
             Classes::hclVolumeConstraint(class) => class.signature(),
             Classes::hclVolumeConstraintApplyData(class) => class.signature(),
             Classes::hclVolumeConstraintFrameData(class) => class.signature(),
@@ -5299,6 +5538,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclVolumeConstraintMxApplySingleData(class) => class.signature(),
             Classes::hclVolumeConstraintMxFrameBatchData(class) => class.signature(),
             Classes::hclVolumeConstraintMxFrameSingleData(class) => class.signature(),
+            Classes::hclVolumeConstraintSetupObject(class) => class.signature(),
             Classes::hkAabb(class) => class.signature(),
             Classes::hkAabb16(class) => class.signature(),
             Classes::hkAabbHalf(class) => class.signature(),
@@ -6030,7 +6270,13 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpDeformableLinConstraintAtom(class) => class.signature(),
             Classes::hkpFixedConstraintData(class) => class.signature(),
             Classes::hkpFixedConstraintDataAtoms(class) => class.signature(),
+            Classes::hkpHingeConstraintData(class) => class.signature(),
+            Classes::hkpHingeConstraintDataAtoms(class) => class.signature(),
+            Classes::hkpHingeLimitsData(class) => class.signature(),
+            Classes::hkpHingeLimitsDataAtoms(class) => class.signature(),
             Classes::hkpLimitedForceConstraintMotor(class) => class.signature(),
+            Classes::hkpLimitedHingeConstraintData(class) => class.signature(),
+            Classes::hkpLimitedHingeConstraintDataAtoms(class) => class.signature(),
             Classes::hkpLinConstraintAtom(class) => class.signature(),
             Classes::hkpLinearClearanceConstraintData(class) => class.signature(),
             Classes::hkpLinearClearanceConstraintDataAtoms(class) => class.signature(),
@@ -6077,6 +6323,8 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpVehicleFrictionStatus(class) => class.signature(),
             Classes::hkpVehicleFrictionStatusAxisStatus(class) => class.signature(),
             Classes::hkpVelocityConstraintMotor(class) => class.signature(),
+            Classes::hkpWheelConstraintData(class) => class.signature(),
+            Classes::hkpWheelConstraintDataAtoms(class) => class.signature(),
             Classes::hkpWheelFrictionConstraintAtom(class) => class.signature(),
             Classes::hkpWheelFrictionConstraintAtomAxle(class) => class.signature(),
             Classes::hkpWheelFrictionConstraintData(class) => class.signature(),
@@ -6219,6 +6467,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBendStiffnessConstraintSetMx(class) => class.deps_indexes(),
             Classes::hclBendStiffnessConstraintSetMxBatch(class) => class.deps_indexes(),
             Classes::hclBendStiffnessConstraintSetMxSingle(class) => class.deps_indexes(),
+            Classes::hclBendStiffnessSetupObject(class) => class.deps_indexes(),
             Classes::hclBlendSomeVerticesOperator(class) => class.deps_indexes(),
             Classes::hclBlendSomeVerticesOperatorBlendEntry(class) => {
                 class.deps_indexes()
@@ -6270,12 +6519,16 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclBufferLayout(class) => class.deps_indexes(),
             Classes::hclBufferLayoutBufferElement(class) => class.deps_indexes(),
             Classes::hclBufferLayoutSlot(class) => class.deps_indexes(),
+            Classes::hclBufferSetupObject(class) => class.deps_indexes(),
             Classes::hclBufferUsage(class) => class.deps_indexes(),
             Classes::hclCapsuleShape(class) => class.deps_indexes(),
             Classes::hclClothContainer(class) => class.deps_indexes(),
             Classes::hclClothData(class) => class.deps_indexes(),
+            Classes::hclClothSetupContainer(class) => class.deps_indexes(),
+            Classes::hclClothSetupObject(class) => class.deps_indexes(),
             Classes::hclClothState(class) => class.deps_indexes(),
             Classes::hclClothStateBufferAccess(class) => class.deps_indexes(),
+            Classes::hclClothStateSetupObject(class) => class.deps_indexes(),
             Classes::hclClothStateTransformSetAccess(class) => class.deps_indexes(),
             Classes::hclCollidable(class) => class.deps_indexes(),
             Classes::hclCompressibleLinkConstraintSet(class) => class.deps_indexes(),
@@ -6288,10 +6541,12 @@ impl _serde::HavokClass for Classes<'_> {
                 class.deps_indexes()
             }
             Classes::hclConstraintSet(class) => class.deps_indexes(),
+            Classes::hclConstraintSetSetupObject(class) => class.deps_indexes(),
             Classes::hclConvexGeometryShape(class) => class.deps_indexes(),
             Classes::hclConvexHeightFieldShape(class) => class.deps_indexes(),
             Classes::hclConvexPlanesShape(class) => class.deps_indexes(),
             Classes::hclCopyVerticesOperator(class) => class.deps_indexes(),
+            Classes::hclEdgeSelectionInput(class) => class.deps_indexes(),
             Classes::hclGatherAllVerticesOperator(class) => class.deps_indexes(),
             Classes::hclGatherSomeVerticesOperator(class) => class.deps_indexes(),
             Classes::hclGatherSomeVerticesOperatorVertexPair(class) => {
@@ -6302,18 +6557,23 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclLocalRangeConstraintSetLocalConstraint(class) => {
                 class.deps_indexes()
             }
+            Classes::hclLocalRangeSetupObject(class) => class.deps_indexes(),
             Classes::hclMeshBoneDeformOperator(class) => class.deps_indexes(),
             Classes::hclMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.deps_indexes()
             }
+            Classes::hclMeshBoneDeformSetupObject(class) => class.deps_indexes(),
             Classes::hclMeshMeshDeformOperator(class) => class.deps_indexes(),
             Classes::hclMeshMeshDeformOperatorTriangleVertexPair(class) => {
                 class.deps_indexes()
             }
+            Classes::hclMoveFixedParticlesSetupObject(class) => class.deps_indexes(),
             Classes::hclMoveParticlesOperator(class) => class.deps_indexes(),
             Classes::hclMoveParticlesOperatorVertexParticlePair(class) => {
                 class.deps_indexes()
             }
+            Classes::hclNamedSetupMesh(class) => class.deps_indexes(),
+            Classes::hclNamedTransformSetSetupObject(class) => class.deps_indexes(),
             Classes::hclObjectSpaceDeformer(class) => class.deps_indexes(),
             Classes::hclObjectSpaceDeformerFourBlendEntryBlock(class) => {
                 class.deps_indexes()
@@ -6360,6 +6620,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclObjectSpaceSkinPNTOperator(class) => class.deps_indexes(),
             Classes::hclObjectSpaceSkinPOperator(class) => class.deps_indexes(),
             Classes::hclOperator(class) => class.deps_indexes(),
+            Classes::hclOperatorSetupObject(class) => class.deps_indexes(),
             Classes::hclOutputConvertOperator(class) => class.deps_indexes(),
             Classes::hclPlaneShape(class) => class.deps_indexes(),
             Classes::hclRuntimeConversionInfo(class) => class.deps_indexes(),
@@ -6370,8 +6631,11 @@ impl _serde::HavokClass for Classes<'_> {
                 class.deps_indexes()
             }
             Classes::hclScratchBufferDefinition(class) => class.deps_indexes(),
+            Classes::hclScratchBufferSetupObject(class) => class.deps_indexes(),
+            Classes::hclSetupMesh(class) => class.deps_indexes(),
             Classes::hclShadowBufferDefinition(class) => class.deps_indexes(),
             Classes::hclShape(class) => class.deps_indexes(),
+            Classes::hclSimClothBufferSetupObject(class) => class.deps_indexes(),
             Classes::hclSimClothData(class) => class.deps_indexes(),
             Classes::hclSimClothDataCollidablePinchingData(class) => class.deps_indexes(),
             Classes::hclSimClothDataCollidableTransformMap(class) => class.deps_indexes(),
@@ -6382,37 +6646,56 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclSimClothDataParticleData(class) => class.deps_indexes(),
             Classes::hclSimClothDataTransferMotionData(class) => class.deps_indexes(),
             Classes::hclSimClothPose(class) => class.deps_indexes(),
+            Classes::hclSimClothSetupObject(class) => class.deps_indexes(),
+            Classes::hclSimClothSetupObjectPerInstanceCollidable(class) => {
+                class.deps_indexes()
+            }
+            Classes::hclSimClothSetupObjectTransferMotionSetupData(class) => {
+                class.deps_indexes()
+            }
             Classes::hclSimpleMeshBoneDeformOperator(class) => class.deps_indexes(),
             Classes::hclSimpleMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.deps_indexes()
             }
             Classes::hclSimpleWindAction(class) => class.deps_indexes(),
             Classes::hclSimulateOperator(class) => class.deps_indexes(),
+            Classes::hclSimulateSetupObject(class) => class.deps_indexes(),
+            Classes::hclSimulationSetupMesh(class) => class.deps_indexes(),
+            Classes::hclSimulationSetupMeshMapOptions(class) => class.deps_indexes(),
             Classes::hclSkinOperator(class) => class.deps_indexes(),
             Classes::hclSkinOperatorBoneInfluence(class) => class.deps_indexes(),
+            Classes::hclSkinSetupObject(class) => class.deps_indexes(),
             Classes::hclSphereShape(class) => class.deps_indexes(),
             Classes::hclStandardLinkConstraintSet(class) => class.deps_indexes(),
             Classes::hclStandardLinkConstraintSetLink(class) => class.deps_indexes(),
             Classes::hclStandardLinkConstraintSetMx(class) => class.deps_indexes(),
             Classes::hclStandardLinkConstraintSetMxBatch(class) => class.deps_indexes(),
             Classes::hclStandardLinkConstraintSetMxSingle(class) => class.deps_indexes(),
+            Classes::hclStandardLinkSetupObject(class) => class.deps_indexes(),
+            Classes::hclStaticDisplayBufferSetupObject(class) => class.deps_indexes(),
             Classes::hclStaticShadowBufferDefinition(class) => class.deps_indexes(),
             Classes::hclStretchLinkConstraintSet(class) => class.deps_indexes(),
             Classes::hclStretchLinkConstraintSetLink(class) => class.deps_indexes(),
             Classes::hclStretchLinkConstraintSetMx(class) => class.deps_indexes(),
             Classes::hclStretchLinkConstraintSetMxBatch(class) => class.deps_indexes(),
             Classes::hclStretchLinkConstraintSetMxSingle(class) => class.deps_indexes(),
+            Classes::hclStretchLinkSetupObject(class) => class.deps_indexes(),
             Classes::hclTaperedCapsuleShape(class) => class.deps_indexes(),
             Classes::hclTransformSetDefinition(class) => class.deps_indexes(),
+            Classes::hclTransformSetSetupObject(class) => class.deps_indexes(),
             Classes::hclTransformSetUsage(class) => class.deps_indexes(),
             Classes::hclTransformSetUsageTransformTracker(class) => class.deps_indexes(),
             Classes::hclTransitionConstraintSet(class) => class.deps_indexes(),
             Classes::hclTransitionConstraintSetPerParticle(class) => class.deps_indexes(),
+            Classes::hclTriangleSelectionInput(class) => class.deps_indexes(),
             Classes::hclUpdateAllVertexFramesOperator(class) => class.deps_indexes(),
             Classes::hclUpdateSomeVertexFramesOperator(class) => class.deps_indexes(),
             Classes::hclUpdateSomeVertexFramesOperatorTriangle(class) => {
                 class.deps_indexes()
             }
+            Classes::hclVertexFloatInput(class) => class.deps_indexes(),
+            Classes::hclVertexGatherSetupObject(class) => class.deps_indexes(),
+            Classes::hclVertexSelectionInput(class) => class.deps_indexes(),
             Classes::hclVolumeConstraint(class) => class.deps_indexes(),
             Classes::hclVolumeConstraintApplyData(class) => class.deps_indexes(),
             Classes::hclVolumeConstraintFrameData(class) => class.deps_indexes(),
@@ -6421,6 +6704,7 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hclVolumeConstraintMxApplySingleData(class) => class.deps_indexes(),
             Classes::hclVolumeConstraintMxFrameBatchData(class) => class.deps_indexes(),
             Classes::hclVolumeConstraintMxFrameSingleData(class) => class.deps_indexes(),
+            Classes::hclVolumeConstraintSetupObject(class) => class.deps_indexes(),
             Classes::hkAabb(class) => class.deps_indexes(),
             Classes::hkAabb16(class) => class.deps_indexes(),
             Classes::hkAabbHalf(class) => class.deps_indexes(),
@@ -7188,7 +7472,13 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpDeformableLinConstraintAtom(class) => class.deps_indexes(),
             Classes::hkpFixedConstraintData(class) => class.deps_indexes(),
             Classes::hkpFixedConstraintDataAtoms(class) => class.deps_indexes(),
+            Classes::hkpHingeConstraintData(class) => class.deps_indexes(),
+            Classes::hkpHingeConstraintDataAtoms(class) => class.deps_indexes(),
+            Classes::hkpHingeLimitsData(class) => class.deps_indexes(),
+            Classes::hkpHingeLimitsDataAtoms(class) => class.deps_indexes(),
             Classes::hkpLimitedForceConstraintMotor(class) => class.deps_indexes(),
+            Classes::hkpLimitedHingeConstraintData(class) => class.deps_indexes(),
+            Classes::hkpLimitedHingeConstraintDataAtoms(class) => class.deps_indexes(),
             Classes::hkpLinConstraintAtom(class) => class.deps_indexes(),
             Classes::hkpLinearClearanceConstraintData(class) => class.deps_indexes(),
             Classes::hkpLinearClearanceConstraintDataAtoms(class) => class.deps_indexes(),
@@ -7235,6 +7525,8 @@ impl _serde::HavokClass for Classes<'_> {
             Classes::hkpVehicleFrictionStatus(class) => class.deps_indexes(),
             Classes::hkpVehicleFrictionStatusAxisStatus(class) => class.deps_indexes(),
             Classes::hkpVelocityConstraintMotor(class) => class.deps_indexes(),
+            Classes::hkpWheelConstraintData(class) => class.deps_indexes(),
+            Classes::hkpWheelConstraintDataAtoms(class) => class.deps_indexes(),
             Classes::hkpWheelFrictionConstraintAtom(class) => class.deps_indexes(),
             Classes::hkpWheelFrictionConstraintAtomAxle(class) => class.deps_indexes(),
             Classes::hkpWheelFrictionConstraintData(class) => class.deps_indexes(),
@@ -7410,6 +7702,7 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclBendStiffnessConstraintSetMxSingle(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclBendStiffnessSetupObject(class) => class.serialize(serializer),
             Classes::hclBlendSomeVerticesOperator(class) => class.serialize(serializer),
             Classes::hclBlendSomeVerticesOperatorBlendEntry(class) => {
                 class.serialize(serializer)
@@ -7479,12 +7772,16 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclBufferLayout(class) => class.serialize(serializer),
             Classes::hclBufferLayoutBufferElement(class) => class.serialize(serializer),
             Classes::hclBufferLayoutSlot(class) => class.serialize(serializer),
+            Classes::hclBufferSetupObject(class) => class.serialize(serializer),
             Classes::hclBufferUsage(class) => class.serialize(serializer),
             Classes::hclCapsuleShape(class) => class.serialize(serializer),
             Classes::hclClothContainer(class) => class.serialize(serializer),
             Classes::hclClothData(class) => class.serialize(serializer),
+            Classes::hclClothSetupContainer(class) => class.serialize(serializer),
+            Classes::hclClothSetupObject(class) => class.serialize(serializer),
             Classes::hclClothState(class) => class.serialize(serializer),
             Classes::hclClothStateBufferAccess(class) => class.serialize(serializer),
+            Classes::hclClothStateSetupObject(class) => class.serialize(serializer),
             Classes::hclClothStateTransformSetAccess(class) => {
                 class.serialize(serializer)
             }
@@ -7505,10 +7802,12 @@ impl<'a> _serde::Serialize for Classes<'a> {
                 class.serialize(serializer)
             }
             Classes::hclConstraintSet(class) => class.serialize(serializer),
+            Classes::hclConstraintSetSetupObject(class) => class.serialize(serializer),
             Classes::hclConvexGeometryShape(class) => class.serialize(serializer),
             Classes::hclConvexHeightFieldShape(class) => class.serialize(serializer),
             Classes::hclConvexPlanesShape(class) => class.serialize(serializer),
             Classes::hclCopyVerticesOperator(class) => class.serialize(serializer),
+            Classes::hclEdgeSelectionInput(class) => class.serialize(serializer),
             Classes::hclGatherAllVerticesOperator(class) => class.serialize(serializer),
             Classes::hclGatherSomeVerticesOperator(class) => class.serialize(serializer),
             Classes::hclGatherSomeVerticesOperatorVertexPair(class) => {
@@ -7519,16 +7818,25 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclLocalRangeConstraintSetLocalConstraint(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclLocalRangeSetupObject(class) => class.serialize(serializer),
             Classes::hclMeshBoneDeformOperator(class) => class.serialize(serializer),
             Classes::hclMeshBoneDeformOperatorTriangleBonePair(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclMeshBoneDeformSetupObject(class) => class.serialize(serializer),
             Classes::hclMeshMeshDeformOperator(class) => class.serialize(serializer),
             Classes::hclMeshMeshDeformOperatorTriangleVertexPair(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclMoveFixedParticlesSetupObject(class) => {
+                class.serialize(serializer)
+            }
             Classes::hclMoveParticlesOperator(class) => class.serialize(serializer),
             Classes::hclMoveParticlesOperatorVertexParticlePair(class) => {
+                class.serialize(serializer)
+            }
+            Classes::hclNamedSetupMesh(class) => class.serialize(serializer),
+            Classes::hclNamedTransformSetSetupObject(class) => {
                 class.serialize(serializer)
             }
             Classes::hclObjectSpaceDeformer(class) => class.serialize(serializer),
@@ -7589,6 +7897,7 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclObjectSpaceSkinPNTOperator(class) => class.serialize(serializer),
             Classes::hclObjectSpaceSkinPOperator(class) => class.serialize(serializer),
             Classes::hclOperator(class) => class.serialize(serializer),
+            Classes::hclOperatorSetupObject(class) => class.serialize(serializer),
             Classes::hclOutputConvertOperator(class) => class.serialize(serializer),
             Classes::hclPlaneShape(class) => class.serialize(serializer),
             Classes::hclRuntimeConversionInfo(class) => class.serialize(serializer),
@@ -7599,8 +7908,11 @@ impl<'a> _serde::Serialize for Classes<'a> {
                 class.serialize(serializer)
             }
             Classes::hclScratchBufferDefinition(class) => class.serialize(serializer),
+            Classes::hclScratchBufferSetupObject(class) => class.serialize(serializer),
+            Classes::hclSetupMesh(class) => class.serialize(serializer),
             Classes::hclShadowBufferDefinition(class) => class.serialize(serializer),
             Classes::hclShape(class) => class.serialize(serializer),
+            Classes::hclSimClothBufferSetupObject(class) => class.serialize(serializer),
             Classes::hclSimClothData(class) => class.serialize(serializer),
             Classes::hclSimClothDataCollidablePinchingData(class) => {
                 class.serialize(serializer)
@@ -7619,6 +7931,13 @@ impl<'a> _serde::Serialize for Classes<'a> {
                 class.serialize(serializer)
             }
             Classes::hclSimClothPose(class) => class.serialize(serializer),
+            Classes::hclSimClothSetupObject(class) => class.serialize(serializer),
+            Classes::hclSimClothSetupObjectPerInstanceCollidable(class) => {
+                class.serialize(serializer)
+            }
+            Classes::hclSimClothSetupObjectTransferMotionSetupData(class) => {
+                class.serialize(serializer)
+            }
             Classes::hclSimpleMeshBoneDeformOperator(class) => {
                 class.serialize(serializer)
             }
@@ -7627,8 +7946,14 @@ impl<'a> _serde::Serialize for Classes<'a> {
             }
             Classes::hclSimpleWindAction(class) => class.serialize(serializer),
             Classes::hclSimulateOperator(class) => class.serialize(serializer),
+            Classes::hclSimulateSetupObject(class) => class.serialize(serializer),
+            Classes::hclSimulationSetupMesh(class) => class.serialize(serializer),
+            Classes::hclSimulationSetupMeshMapOptions(class) => {
+                class.serialize(serializer)
+            }
             Classes::hclSkinOperator(class) => class.serialize(serializer),
             Classes::hclSkinOperatorBoneInfluence(class) => class.serialize(serializer),
+            Classes::hclSkinSetupObject(class) => class.serialize(serializer),
             Classes::hclSphereShape(class) => class.serialize(serializer),
             Classes::hclStandardLinkConstraintSet(class) => class.serialize(serializer),
             Classes::hclStandardLinkConstraintSetLink(class) => {
@@ -7639,6 +7964,10 @@ impl<'a> _serde::Serialize for Classes<'a> {
                 class.serialize(serializer)
             }
             Classes::hclStandardLinkConstraintSetMxSingle(class) => {
+                class.serialize(serializer)
+            }
+            Classes::hclStandardLinkSetupObject(class) => class.serialize(serializer),
+            Classes::hclStaticDisplayBufferSetupObject(class) => {
                 class.serialize(serializer)
             }
             Classes::hclStaticShadowBufferDefinition(class) => {
@@ -7655,8 +7984,10 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclStretchLinkConstraintSetMxSingle(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclStretchLinkSetupObject(class) => class.serialize(serializer),
             Classes::hclTaperedCapsuleShape(class) => class.serialize(serializer),
             Classes::hclTransformSetDefinition(class) => class.serialize(serializer),
+            Classes::hclTransformSetSetupObject(class) => class.serialize(serializer),
             Classes::hclTransformSetUsage(class) => class.serialize(serializer),
             Classes::hclTransformSetUsageTransformTracker(class) => {
                 class.serialize(serializer)
@@ -7665,6 +7996,7 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclTransitionConstraintSetPerParticle(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclTriangleSelectionInput(class) => class.serialize(serializer),
             Classes::hclUpdateAllVertexFramesOperator(class) => {
                 class.serialize(serializer)
             }
@@ -7674,6 +8006,9 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclUpdateSomeVertexFramesOperatorTriangle(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclVertexFloatInput(class) => class.serialize(serializer),
+            Classes::hclVertexGatherSetupObject(class) => class.serialize(serializer),
+            Classes::hclVertexSelectionInput(class) => class.serialize(serializer),
             Classes::hclVolumeConstraint(class) => class.serialize(serializer),
             Classes::hclVolumeConstraintApplyData(class) => class.serialize(serializer),
             Classes::hclVolumeConstraintFrameData(class) => class.serialize(serializer),
@@ -7690,6 +8025,7 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hclVolumeConstraintMxFrameSingleData(class) => {
                 class.serialize(serializer)
             }
+            Classes::hclVolumeConstraintSetupObject(class) => class.serialize(serializer),
             Classes::hkAabb(class) => class.serialize(serializer),
             Classes::hkAabb16(class) => class.serialize(serializer),
             Classes::hkAabbHalf(class) => class.serialize(serializer),
@@ -8635,7 +8971,15 @@ impl<'a> _serde::Serialize for Classes<'a> {
             Classes::hkpDeformableLinConstraintAtom(class) => class.serialize(serializer),
             Classes::hkpFixedConstraintData(class) => class.serialize(serializer),
             Classes::hkpFixedConstraintDataAtoms(class) => class.serialize(serializer),
+            Classes::hkpHingeConstraintData(class) => class.serialize(serializer),
+            Classes::hkpHingeConstraintDataAtoms(class) => class.serialize(serializer),
+            Classes::hkpHingeLimitsData(class) => class.serialize(serializer),
+            Classes::hkpHingeLimitsDataAtoms(class) => class.serialize(serializer),
             Classes::hkpLimitedForceConstraintMotor(class) => class.serialize(serializer),
+            Classes::hkpLimitedHingeConstraintData(class) => class.serialize(serializer),
+            Classes::hkpLimitedHingeConstraintDataAtoms(class) => {
+                class.serialize(serializer)
+            }
             Classes::hkpLinConstraintAtom(class) => class.serialize(serializer),
             Classes::hkpLinearClearanceConstraintData(class) => {
                 class.serialize(serializer)
@@ -8706,6 +9050,8 @@ impl<'a> _serde::Serialize for Classes<'a> {
                 class.serialize(serializer)
             }
             Classes::hkpVelocityConstraintMotor(class) => class.serialize(serializer),
+            Classes::hkpWheelConstraintData(class) => class.serialize(serializer),
+            Classes::hkpWheelConstraintDataAtoms(class) => class.serialize(serializer),
             Classes::hkpWheelFrictionConstraintAtom(class) => class.serialize(serializer),
             Classes::hkpWheelFrictionConstraintAtomAxle(class) => {
                 class.serialize(serializer)
@@ -9049,6 +9395,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                             ),
                         )
                     }
+                    "hclBendStiffnessSetupObject" => {
+                        Ok(Classes::hclBendStiffnessSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclBlendSomeVerticesOperator" => {
                         Ok(Classes::hclBlendSomeVerticesOperator(next_boxed(&mut map)?))
                     }
@@ -9218,6 +9567,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclBufferLayoutSlot" => {
                         Ok(Classes::hclBufferLayoutSlot(next_boxed(&mut map)?))
                     }
+                    "hclBufferSetupObject" => {
+                        Ok(Classes::hclBufferSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclBufferUsage" => {
                         Ok(Classes::hclBufferUsage(next_boxed(&mut map)?))
                     }
@@ -9228,9 +9580,18 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                         Ok(Classes::hclClothContainer(next_boxed(&mut map)?))
                     }
                     "hclClothData" => Ok(Classes::hclClothData(next_boxed(&mut map)?)),
+                    "hclClothSetupContainer" => {
+                        Ok(Classes::hclClothSetupContainer(next_boxed(&mut map)?))
+                    }
+                    "hclClothSetupObject" => {
+                        Ok(Classes::hclClothSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclClothState" => Ok(Classes::hclClothState(next_boxed(&mut map)?)),
                     "hclClothStateBufferAccess" => {
                         Ok(Classes::hclClothStateBufferAccess(next_boxed(&mut map)?))
+                    }
+                    "hclClothStateSetupObject" => {
+                        Ok(Classes::hclClothStateSetupObject(next_boxed(&mut map)?))
                     }
                     "hclClothStateTransformSetAccess" => {
                         Ok(
@@ -9278,6 +9639,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclConstraintSet" => {
                         Ok(Classes::hclConstraintSet(next_boxed(&mut map)?))
                     }
+                    "hclConstraintSetSetupObject" => {
+                        Ok(Classes::hclConstraintSetSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclConvexGeometryShape" => {
                         Ok(Classes::hclConvexGeometryShape(next_boxed(&mut map)?))
                     }
@@ -9289,6 +9653,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     }
                     "hclCopyVerticesOperator" => {
                         Ok(Classes::hclCopyVerticesOperator(next_boxed(&mut map)?))
+                    }
+                    "hclEdgeSelectionInput" => {
+                        Ok(Classes::hclEdgeSelectionInput(next_boxed(&mut map)?))
                     }
                     "hclGatherAllVerticesOperator" => {
                         Ok(Classes::hclGatherAllVerticesOperator(next_boxed(&mut map)?))
@@ -9316,6 +9683,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                             ),
                         )
                     }
+                    "hclLocalRangeSetupObject" => {
+                        Ok(Classes::hclLocalRangeSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclMeshBoneDeformOperator" => {
                         Ok(Classes::hclMeshBoneDeformOperator(next_boxed(&mut map)?))
                     }
@@ -9325,6 +9695,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                 next_boxed(&mut map)?,
                             ),
                         )
+                    }
+                    "hclMeshBoneDeformSetupObject" => {
+                        Ok(Classes::hclMeshBoneDeformSetupObject(next_boxed(&mut map)?))
                     }
                     "hclMeshMeshDeformOperator" => {
                         Ok(Classes::hclMeshMeshDeformOperator(next_boxed(&mut map)?))
@@ -9336,12 +9709,29 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                             ),
                         )
                     }
+                    "hclMoveFixedParticlesSetupObject" => {
+                        Ok(
+                            Classes::hclMoveFixedParticlesSetupObject(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
                     "hclMoveParticlesOperator" => {
                         Ok(Classes::hclMoveParticlesOperator(next_boxed(&mut map)?))
                     }
                     "hclMoveParticlesOperatorVertexParticlePair" => {
                         Ok(
                             Classes::hclMoveParticlesOperatorVertexParticlePair(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
+                    "hclNamedSetupMesh" => {
+                        Ok(Classes::hclNamedSetupMesh(next_boxed(&mut map)?))
+                    }
+                    "hclNamedTransformSetSetupObject" => {
+                        Ok(
+                            Classes::hclNamedTransformSetSetupObject(
                                 next_boxed(&mut map)?,
                             ),
                         )
@@ -9488,6 +9878,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                         Ok(Classes::hclObjectSpaceSkinPOperator(next_boxed(&mut map)?))
                     }
                     "hclOperator" => Ok(Classes::hclOperator(next_boxed(&mut map)?)),
+                    "hclOperatorSetupObject" => {
+                        Ok(Classes::hclOperatorSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclOutputConvertOperator" => {
                         Ok(Classes::hclOutputConvertOperator(next_boxed(&mut map)?))
                     }
@@ -9512,10 +9905,17 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclScratchBufferDefinition" => {
                         Ok(Classes::hclScratchBufferDefinition(next_boxed(&mut map)?))
                     }
+                    "hclScratchBufferSetupObject" => {
+                        Ok(Classes::hclScratchBufferSetupObject(next_boxed(&mut map)?))
+                    }
+                    "hclSetupMesh" => Ok(Classes::hclSetupMesh(next_boxed(&mut map)?)),
                     "hclShadowBufferDefinition" => {
                         Ok(Classes::hclShadowBufferDefinition(next_boxed(&mut map)?))
                     }
                     "hclShape" => Ok(Classes::hclShape(next_boxed(&mut map)?)),
+                    "hclSimClothBufferSetupObject" => {
+                        Ok(Classes::hclSimClothBufferSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclSimClothData" => {
                         Ok(Classes::hclSimClothData(next_boxed(&mut map)?))
                     }
@@ -9560,6 +9960,23 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclSimClothPose" => {
                         Ok(Classes::hclSimClothPose(next_boxed(&mut map)?))
                     }
+                    "hclSimClothSetupObject" => {
+                        Ok(Classes::hclSimClothSetupObject(next_boxed(&mut map)?))
+                    }
+                    "hclSimClothSetupObjectPerInstanceCollidable" => {
+                        Ok(
+                            Classes::hclSimClothSetupObjectPerInstanceCollidable(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
+                    "hclSimClothSetupObjectTransferMotionSetupData" => {
+                        Ok(
+                            Classes::hclSimClothSetupObjectTransferMotionSetupData(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
                     "hclSimpleMeshBoneDeformOperator" => {
                         Ok(
                             Classes::hclSimpleMeshBoneDeformOperator(
@@ -9580,11 +9997,27 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclSimulateOperator" => {
                         Ok(Classes::hclSimulateOperator(next_boxed(&mut map)?))
                     }
+                    "hclSimulateSetupObject" => {
+                        Ok(Classes::hclSimulateSetupObject(next_boxed(&mut map)?))
+                    }
+                    "hclSimulationSetupMesh" => {
+                        Ok(Classes::hclSimulationSetupMesh(next_boxed(&mut map)?))
+                    }
+                    "hclSimulationSetupMeshMapOptions" => {
+                        Ok(
+                            Classes::hclSimulationSetupMeshMapOptions(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
                     "hclSkinOperator" => {
                         Ok(Classes::hclSkinOperator(next_boxed(&mut map)?))
                     }
                     "hclSkinOperatorBoneInfluence" => {
                         Ok(Classes::hclSkinOperatorBoneInfluence(next_boxed(&mut map)?))
+                    }
+                    "hclSkinSetupObject" => {
+                        Ok(Classes::hclSkinSetupObject(next_boxed(&mut map)?))
                     }
                     "hclSphereShape" => {
                         Ok(Classes::hclSphereShape(next_boxed(&mut map)?))
@@ -9616,6 +10049,16 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclStandardLinkConstraintSetMxSingle" => {
                         Ok(
                             Classes::hclStandardLinkConstraintSetMxSingle(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
+                    "hclStandardLinkSetupObject" => {
+                        Ok(Classes::hclStandardLinkSetupObject(next_boxed(&mut map)?))
+                    }
+                    "hclStaticDisplayBufferSetupObject" => {
+                        Ok(
+                            Classes::hclStaticDisplayBufferSetupObject(
                                 next_boxed(&mut map)?,
                             ),
                         )
@@ -9654,11 +10097,17 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                             ),
                         )
                     }
+                    "hclStretchLinkSetupObject" => {
+                        Ok(Classes::hclStretchLinkSetupObject(next_boxed(&mut map)?))
+                    }
                     "hclTaperedCapsuleShape" => {
                         Ok(Classes::hclTaperedCapsuleShape(next_boxed(&mut map)?))
                     }
                     "hclTransformSetDefinition" => {
                         Ok(Classes::hclTransformSetDefinition(next_boxed(&mut map)?))
+                    }
+                    "hclTransformSetSetupObject" => {
+                        Ok(Classes::hclTransformSetSetupObject(next_boxed(&mut map)?))
                     }
                     "hclTransformSetUsage" => {
                         Ok(Classes::hclTransformSetUsage(next_boxed(&mut map)?))
@@ -9680,6 +10129,9 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                             ),
                         )
                     }
+                    "hclTriangleSelectionInput" => {
+                        Ok(Classes::hclTriangleSelectionInput(next_boxed(&mut map)?))
+                    }
                     "hclUpdateAllVertexFramesOperator" => {
                         Ok(
                             Classes::hclUpdateAllVertexFramesOperator(
@@ -9700,6 +10152,15 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                 next_boxed(&mut map)?,
                             ),
                         )
+                    }
+                    "hclVertexFloatInput" => {
+                        Ok(Classes::hclVertexFloatInput(next_boxed(&mut map)?))
+                    }
+                    "hclVertexGatherSetupObject" => {
+                        Ok(Classes::hclVertexGatherSetupObject(next_boxed(&mut map)?))
+                    }
+                    "hclVertexSelectionInput" => {
+                        Ok(Classes::hclVertexSelectionInput(next_boxed(&mut map)?))
                     }
                     "hclVolumeConstraint" => {
                         Ok(Classes::hclVolumeConstraint(next_boxed(&mut map)?))
@@ -9737,6 +10198,13 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hclVolumeConstraintMxFrameSingleData" => {
                         Ok(
                             Classes::hclVolumeConstraintMxFrameSingleData(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
+                    "hclVolumeConstraintSetupObject" => {
+                        Ok(
+                            Classes::hclVolumeConstraintSetupObject(
                                 next_boxed(&mut map)?,
                             ),
                         )
@@ -12232,9 +12700,31 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     "hkpFixedConstraintDataAtoms" => {
                         Ok(Classes::hkpFixedConstraintDataAtoms(next_boxed(&mut map)?))
                     }
+                    "hkpHingeConstraintData" => {
+                        Ok(Classes::hkpHingeConstraintData(next_boxed(&mut map)?))
+                    }
+                    "hkpHingeConstraintDataAtoms" => {
+                        Ok(Classes::hkpHingeConstraintDataAtoms(next_boxed(&mut map)?))
+                    }
+                    "hkpHingeLimitsData" => {
+                        Ok(Classes::hkpHingeLimitsData(next_boxed(&mut map)?))
+                    }
+                    "hkpHingeLimitsDataAtoms" => {
+                        Ok(Classes::hkpHingeLimitsDataAtoms(next_boxed(&mut map)?))
+                    }
                     "hkpLimitedForceConstraintMotor" => {
                         Ok(
                             Classes::hkpLimitedForceConstraintMotor(
+                                next_boxed(&mut map)?,
+                            ),
+                        )
+                    }
+                    "hkpLimitedHingeConstraintData" => {
+                        Ok(Classes::hkpLimitedHingeConstraintData(next_boxed(&mut map)?))
+                    }
+                    "hkpLimitedHingeConstraintDataAtoms" => {
+                        Ok(
+                            Classes::hkpLimitedHingeConstraintDataAtoms(
                                 next_boxed(&mut map)?,
                             ),
                         )
@@ -12434,6 +12924,12 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                     }
                     "hkpVelocityConstraintMotor" => {
                         Ok(Classes::hkpVelocityConstraintMotor(next_boxed(&mut map)?))
+                    }
+                    "hkpWheelConstraintData" => {
+                        Ok(Classes::hkpWheelConstraintData(next_boxed(&mut map)?))
+                    }
+                    "hkpWheelConstraintDataAtoms" => {
+                        Ok(Classes::hkpWheelConstraintDataAtoms(next_boxed(&mut map)?))
                     }
                     "hkpWheelFrictionConstraintAtom" => {
                         Ok(
@@ -12740,6 +13236,7 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclBendStiffnessConstraintSetMx",
                                     "hclBendStiffnessConstraintSetMxBatch",
                                     "hclBendStiffnessConstraintSetMxSingle",
+                                    "hclBendStiffnessSetupObject",
                                     "hclBlendSomeVerticesOperator",
                                     "hclBlendSomeVerticesOperatorBlendEntry",
                                     "hclBonePlanesConstraintSet",
@@ -12771,12 +13268,16 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclBufferLayout",
                                     "hclBufferLayoutBufferElement",
                                     "hclBufferLayoutSlot",
+                                    "hclBufferSetupObject",
                                     "hclBufferUsage",
                                     "hclCapsuleShape",
                                     "hclClothContainer",
                                     "hclClothData",
+                                    "hclClothSetupContainer",
+                                    "hclClothSetupObject",
                                     "hclClothState",
                                     "hclClothStateBufferAccess",
+                                    "hclClothStateSetupObject",
                                     "hclClothStateTransformSetAccess",
                                     "hclCollidable",
                                     "hclCompressibleLinkConstraintSet",
@@ -12785,22 +13286,29 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclCompressibleLinkConstraintSetMxBatch",
                                     "hclCompressibleLinkConstraintSetMxSingle",
                                     "hclConstraintSet",
+                                    "hclConstraintSetSetupObject",
                                     "hclConvexGeometryShape",
                                     "hclConvexHeightFieldShape",
                                     "hclConvexPlanesShape",
                                     "hclCopyVerticesOperator",
+                                    "hclEdgeSelectionInput",
                                     "hclGatherAllVerticesOperator",
                                     "hclGatherSomeVerticesOperator",
                                     "hclGatherSomeVerticesOperatorVertexPair",
                                     "hclInputConvertOperator",
                                     "hclLocalRangeConstraintSet",
                                     "hclLocalRangeConstraintSetLocalConstraint",
+                                    "hclLocalRangeSetupObject",
                                     "hclMeshBoneDeformOperator",
                                     "hclMeshBoneDeformOperatorTriangleBonePair",
+                                    "hclMeshBoneDeformSetupObject",
                                     "hclMeshMeshDeformOperator",
                                     "hclMeshMeshDeformOperatorTriangleVertexPair",
+                                    "hclMoveFixedParticlesSetupObject",
                                     "hclMoveParticlesOperator",
                                     "hclMoveParticlesOperatorVertexParticlePair",
+                                    "hclNamedSetupMesh",
+                                    "hclNamedTransformSetSetupObject",
                                     "hclObjectSpaceDeformer",
                                     "hclObjectSpaceDeformerFourBlendEntryBlock",
                                     "hclObjectSpaceDeformerLocalBlockP",
@@ -12825,14 +13333,18 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclObjectSpaceSkinPNTOperator",
                                     "hclObjectSpaceSkinPOperator",
                                     "hclOperator",
+                                    "hclOperatorSetupObject",
                                     "hclOutputConvertOperator",
                                     "hclPlaneShape",
                                     "hclRuntimeConversionInfo",
                                     "hclRuntimeConversionInfoElementConversion",
                                     "hclRuntimeConversionInfoSlotConversion",
                                     "hclScratchBufferDefinition",
+                                    "hclScratchBufferSetupObject",
+                                    "hclSetupMesh",
                                     "hclShadowBufferDefinition",
                                     "hclShape",
+                                    "hclSimClothBufferSetupObject",
                                     "hclSimClothData",
                                     "hclSimClothDataCollidablePinchingData",
                                     "hclSimClothDataCollidableTransformMap",
@@ -12841,33 +13353,48 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclSimClothDataParticleData",
                                     "hclSimClothDataTransferMotionData",
                                     "hclSimClothPose",
+                                    "hclSimClothSetupObject",
+                                    "hclSimClothSetupObjectPerInstanceCollidable",
+                                    "hclSimClothSetupObjectTransferMotionSetupData",
                                     "hclSimpleMeshBoneDeformOperator",
                                     "hclSimpleMeshBoneDeformOperatorTriangleBonePair",
                                     "hclSimpleWindAction",
                                     "hclSimulateOperator",
+                                    "hclSimulateSetupObject",
+                                    "hclSimulationSetupMesh",
+                                    "hclSimulationSetupMeshMapOptions",
                                     "hclSkinOperator",
                                     "hclSkinOperatorBoneInfluence",
+                                    "hclSkinSetupObject",
                                     "hclSphereShape",
                                     "hclStandardLinkConstraintSet",
                                     "hclStandardLinkConstraintSetLink",
                                     "hclStandardLinkConstraintSetMx",
                                     "hclStandardLinkConstraintSetMxBatch",
                                     "hclStandardLinkConstraintSetMxSingle",
+                                    "hclStandardLinkSetupObject",
+                                    "hclStaticDisplayBufferSetupObject",
                                     "hclStaticShadowBufferDefinition",
                                     "hclStretchLinkConstraintSet",
                                     "hclStretchLinkConstraintSetLink",
                                     "hclStretchLinkConstraintSetMx",
                                     "hclStretchLinkConstraintSetMxBatch",
                                     "hclStretchLinkConstraintSetMxSingle",
+                                    "hclStretchLinkSetupObject",
                                     "hclTaperedCapsuleShape",
                                     "hclTransformSetDefinition",
+                                    "hclTransformSetSetupObject",
                                     "hclTransformSetUsage",
                                     "hclTransformSetUsageTransformTracker",
                                     "hclTransitionConstraintSet",
                                     "hclTransitionConstraintSetPerParticle",
+                                    "hclTriangleSelectionInput",
                                     "hclUpdateAllVertexFramesOperator",
                                     "hclUpdateSomeVertexFramesOperator",
                                     "hclUpdateSomeVertexFramesOperatorTriangle",
+                                    "hclVertexFloatInput",
+                                    "hclVertexGatherSetupObject",
+                                    "hclVertexSelectionInput",
                                     "hclVolumeConstraint",
                                     "hclVolumeConstraintApplyData",
                                     "hclVolumeConstraintFrameData",
@@ -12876,6 +13403,7 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hclVolumeConstraintMxApplySingleData",
                                     "hclVolumeConstraintMxFrameBatchData",
                                     "hclVolumeConstraintMxFrameSingleData",
+                                    "hclVolumeConstraintSetupObject",
                                     "hkAabb",
                                     "hkAabb16",
                                     "hkAabbHalf",
@@ -13493,7 +14021,13 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hkpDeformableLinConstraintAtom",
                                     "hkpFixedConstraintData",
                                     "hkpFixedConstraintDataAtoms",
+                                    "hkpHingeConstraintData",
+                                    "hkpHingeConstraintDataAtoms",
+                                    "hkpHingeLimitsData",
+                                    "hkpHingeLimitsDataAtoms",
                                     "hkpLimitedForceConstraintMotor",
+                                    "hkpLimitedHingeConstraintData",
+                                    "hkpLimitedHingeConstraintDataAtoms",
                                     "hkpLinConstraintAtom",
                                     "hkpLinearClearanceConstraintData",
                                     "hkpLinearClearanceConstraintDataAtoms",
@@ -13538,6 +14072,8 @@ impl<'a, 'de: 'a> _serde::Deserialize<'de> for Classes<'a> {
                                     "hkpVehicleFrictionStatus",
                                     "hkpVehicleFrictionStatusAxisStatus",
                                     "hkpVelocityConstraintMotor",
+                                    "hkpWheelConstraintData",
+                                    "hkpWheelConstraintDataAtoms",
                                     "hkpWheelFrictionConstraintAtom",
                                     "hkpWheelFrictionConstraintAtomAxle",
                                     "hkpWheelFrictionConstraintData",
